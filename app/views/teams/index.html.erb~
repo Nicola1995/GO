@@ -1,0 +1,14 @@
+Положение об европейсокм чемпионате.
+
+регистарция
+просмотр всех команд
+
+
+
+
+<%= javascript_tag do %>
+  window.articlesURL = '<%= j articles_url %>';
+  window.articles = <%= raw Article.all.to_json %>
+<% end %>
+
+

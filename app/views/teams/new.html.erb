@@ -1,0 +1,60 @@
+
+<%= form_for @team, url: {action: "create"} do |f| %>
+		
+ <p>
+    <%= f.label :Название %><br>
+    <%= f.text_field :name_team %>
+  </p>
+ 
+
+<div id="team_mate1">
+<p>Первый игрок </p> 
+  <%= fields_for @team.teammates do |ct| %>
+   <%= text_area_tag(:team[:temmates[0]]:level) %>
+    <p>
+      <%= ct.label :ФИО %><br>
+      <%= ct.text_field :name %>
+    </p>
+    <p>
+      <%= ct.label :рейтинг %><br>
+      <%= ct.text_field :level %>
+    </p>
+   <% end %>
+</div>
+
+<div id="team_mate2">
+<p>Второй игрок </p> 
+  <%= fields_for @team.teammates[1] do |c| %>
+   <p> 
+      <%= c.label :ФИО %><br>
+      <%= c.text_field :name %>
+    </p>
+    <p>
+      <%= c.label :рейтинг %><br>
+      <%= c.text_field :level %>
+    </p>
+   <% end %>
+</div>
+
+
+
+<div id="team_mate6" hidden="mates_num < 6">
+<p>Шестой игрок </p> 
+  <%= fields_for @team.teammates[5] do |c| %>
+   <p> 
+      <%= c.label :ФИО %><br>
+      <%= c.text_field :name %>
+    </p>
+    <p>
+      <%= c.label :рейтинг %><br>
+      <%= c.text_field :level %>
+    </p>
+   <% end %>
+</div>
+
+		<br><br>
+		<button onClick="addPlayer()">Добавить игрока</button>
+		<br><br>
+	
+
+<%end%>

@@ -1,0 +1,34 @@
+Положение об европейсокм чемпионате.
+
+регистарция
+просмотр всех команд
+
+
+
+
+<%= javascript_tag do %>
+  window.articlesURL = '<%= j articles_url %>';
+  window.articles = <%= raw Article.all.to_json %>
+<% end %>
+
+<div>
+  <% @teams.each do |team| %>
+	<p> 
+	   название <%=team.name%>
+	</p>
+	<p> 
+	   имя менеджера <%=team.manager.name%>
+	</p>
+		
+	<%team.teammates.each do |tm|%>	
+	<p> 
+	   имя <%=tm.name%>
+	</p>
+	<p> 
+	   имя <%=tm.level%>
+	</p>
+	<%end%>
+
+  <% end %>
+</div>
+

@@ -1,0 +1,23 @@
+<h1> Добавить новость </h1>
+<%= form_for :article, url: article_path, html: {multipart: true} do |f| %>
+  <p>
+    <%= f.label :Название %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :Текст %><br>
+    <%= f.text_area :text %>
+  </p>
+  
+  <p>
+    <%= f.label :Изображение %><br>
+    
+  <%= file_field_tag "images[]", type: :file, multiple: true %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
