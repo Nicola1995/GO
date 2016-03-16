@@ -1,0 +1,27 @@
+
+<h1>Студенческое Го</h1>
+
+
+<div>
+  <% @articles.reverse.each do |article| %>
+    <div style = "border:solid;">
+      <center><h2><%= article.title %></h2></center>
+      <p> <%=article.created_at%><\p>
+ <% qw=0 %>   
+  <% par =article.text.split("<br>")[0] %>
+     <p>
+	<% par.split("<pic>").each do |m_par| %>
+	  <%= m_par %>
+          <%if article.pictures[qw]!= nil %>
+ 		<%=  image_tag article.pictures[qw].image.url(:thumb) %>
+	  <%end%>
+	  <% qw+=1 %>
+        <%end%>
+    </p>
+
+      <a><%= link_to 'Новость целиком', article_path(article) %></a>
+    </div>
+    
+  <% end %>
+</div>
+

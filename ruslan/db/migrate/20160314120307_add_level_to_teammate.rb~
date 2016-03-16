@@ -1,0 +1,23 @@
+class AddLevelToTeammate < ActiveRecord::Migration
+  def change
+    add_column :teammates, :level, :sring
+  end
+
+  reversible do |dir|
+      dir.up do
+        # добавим ограничение CHECK
+        execute <<-SQL
+          ALTER TABLE distributors
+            ADD CONSTRAINT level
+        SQL
+      end
+      dir.down do
+        execute <<-SQL
+          ALTER TABLE teammates
+            DROP  level	
+        SQL
+      end
+    end
+ 
+  end
+end
