@@ -2,8 +2,13 @@
 
 .e-header {
 	position: fixed;
+<<<<<<< HEAD
 	top: 0;
 	height: 200px;
+=======
+	top: 0; 
+	height: 50px;
+>>>>>>> cacf0f6a2f10d06fa18749442f4d5352289a5051
 	background-color: white;
 	width: 100%;
 	z-index: 30;
@@ -63,17 +68,22 @@
 	color: #F77;
 }
 
-
+/* Стиль слайд-шоу */
 
 
 /* Стиль остального контента */
 
 body {
+	top: 50px;
 	position: relative;
 }
 
 .e-content {
+<<<<<<< HEAD
 	padding-top: 210px;
+=======
+	padding-top: 0px;
+>>>>>>> cacf0f6a2f10d06fa18749442f4d5352289a5051
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 0;

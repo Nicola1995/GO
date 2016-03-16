@@ -1,2 +1,0 @@
-class ChampsController < ApplicationController
-end
