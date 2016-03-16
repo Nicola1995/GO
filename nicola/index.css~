@@ -73,8 +73,8 @@
 }
 .e-slide {
 	height: 100%;
-	width: 100%;
 	margin: auto;
+	
 }
 
 #slide1, #slide2, #slide3 {
@@ -136,4 +136,28 @@ body {
 	font-size: 18px;
 	margin-left: 5%;
 	margin-right: 5%;
+}
+
+
+/* Форма для регистрации */
+
+.e-registrationForm {
+	padding-top: 20px;	
+	margin-left: 5%;
+}
+
+#player4, #player5, #player6 {
+	display: none;
+}
+
+.e-regTitle {
+	border-bottom: solid 2px;
+}
+
+.e-regSubTitle {
+	border-bottom: solid 1px;
+}
+
+.e-regPar {
+	padding-top: 10px;
 }
