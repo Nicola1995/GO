@@ -1,0 +1,6 @@
+class AddArticleIdToPictures < ActiveRecord::Migration
+  def change
+	add_column :pictures, :article_id, :string
+  end
+  end
+end
