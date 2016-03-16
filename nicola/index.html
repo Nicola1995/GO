@@ -17,9 +17,19 @@
     <![endif]-->
 	<!-- My Styles -->
 	<link href="index.css" rel="stylesheet">
+  <script>
+	function onScrolled()
+	{
+		//alert('jopaa');
+	  var el = window.document.getElementById("myHeader");
+	  
+//var b = document.getElementById('myBody');
+	  el.setAttribute('visibility', 'visible');//(b.style.top < 0) ? '' : 'none';
+	}
+  </script>
   </head>
-  <body>
-	<div class="e-header">	
+  <body onScroll="onScrolled()" id="myBody">
+	<div id="myHeader" class="e-header">	
 	<div class="e-menuDiv">
 	<a class="e-menuA" href="#">Новости</a>
 	<a class="e-menuA" href="#">Контакты</a>
@@ -29,7 +39,7 @@
 	</div><!-- e-header -->
     <div class="e-content" >
 	<div class="e-newsPost">
-	<div class="e-newsHeader">
+	<div  class="e-newsHeader">
 		<div class="e-newsTitle">
 			Первая новость с очень преочень длинным и бестолковым названием
 		</div><!-- e-newsTitle -->
