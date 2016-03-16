@@ -3,7 +3,7 @@
 .e-header {
 	position: fixed;
 	top: 0;
-	height: 100px;
+	height: 200px;
 	background-color: white;
 	width: 100%;
 	z-index: 30;
@@ -12,7 +12,7 @@
 .e-menuDiv {
 	position: absolute;
 	width: 100%;
-	top: 50px;
+	top: 160px;
 	bottom: 0px;
 	background-color: #EEE;
 	border-bottom: solid 1px #CCC;
@@ -80,7 +80,7 @@ body {
 	min-width: 400px;
 	max-width: 55%;	
 	position: relative;
-	background-color: #F9F7E6;/*#F9F8F6;*/
+	background-color: #E9FFE9;/*#F9F7E6;/*#F9F8F6;*/
 }
 
 .e-newsPost {
@@ -107,7 +107,8 @@ body {
 }
 .e-newsDate {
 	position: relative;
-	right: 0;
+	right: 5%;
+	text-align: right;
 }
 
 .e-newsBody {
