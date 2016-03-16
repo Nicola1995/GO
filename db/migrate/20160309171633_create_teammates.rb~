@@ -1,8 +1,0 @@
-class CreateTeammates < ActiveRecord::Migration
-  def change
-    create_table :teammates do |t|
-
-      t.timestamps null: false
-    end
-  end
-end
