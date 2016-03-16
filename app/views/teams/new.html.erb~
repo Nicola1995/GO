@@ -5,7 +5,30 @@
     <%= f.label :Название %><br>
     <%= f.text_field :name_team %>
   </p>
+
+
+<p> менеджер </p> 
+  <%= f.fields_for @team.manager do |ct| %>
+    <p>
+      <%= ct.label :ФИО %><br>
+      <%= ct.text_field :name %>
+    </p>
+    <p>
+      <%= ct.label :университет %><br>
+      <%= ct.text_field :univercity %>
+    </p>
+    <p>
+      <%= ct.label :контакты %><br>
+      <%= ct.text_field :kontakts %>
+    </p>
+    <p>
+	<%= ct.label :должность %><br>	
+	<%= select_tag(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']])) %>
+    </p>
+   <% end %>
+
  
+
 <%@team.teammates.each do |tm|%>
 <p> игрок </p> 
   <%= f.fields_for tm, index: tm.id do |ct| %>

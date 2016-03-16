@@ -10,17 +10,21 @@
   window.articlesURL = '<%= j articles_url %>';
   window.articles = <%= raw Article.all.to_json %>
 <% end %>
-
-<div>
   <% @teams.each do |team| %>
+<div>
 	<p> 
 	   название <%=team.name_team%>
 	</p>
 	<p> 
-	   имя менеджера <%if team.manager!= nil %> <%=team.manager.name%> <%end%>\
+	   имя менеджера <%if team.manager!= nil %> <%=team.manager.name%> <%end%>
 	</p>
+	<p> 
+	    должность <%if team.manager!= nil %> <%=team.manager.position%> <%end%>
+	</p>
+
 		
 	<%team.teammates.each do |tm|%>	
+	<%if tm.name != ""%>	
 	<p> 
 	   имя <%=tm.name%>
 	</p>
@@ -28,7 +32,14 @@
 	   уровень <%=tm.level%>
 	</p>
 	<%end%>
+	<%end%>
+<p>
+<%= link_to 'Destroy', team_path(team),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+</p>
+</div>
 
   <% end %>
-</div>
 
