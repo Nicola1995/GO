@@ -66,8 +66,8 @@
 	</div>
 	<h3 class="e-regSubTitle"> Общая информация о команде </h3>			
  <p>
-    <!--label for="team_Название">Название</label><br-->
-    <input placeholder="Название команды" type="text" name="team[name_team]" id="team_name_team" />
+    <label for="team_Название">Название</label><br>
+    <input type="text" name="team[name_team]" id="team_name_team" />
   </p>
 
 <h3 class="e-regSubTitle"> Менеджер </h3>
