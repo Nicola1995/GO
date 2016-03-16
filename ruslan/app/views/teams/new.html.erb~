@@ -23,14 +23,15 @@
     </p>
     <p>
 	<%= ct.label :должность %><br>	
-	<%= select_tag(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']])) %>
+	<%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']])) %>
     </p>
    <% end %>
 
  
-
+<%q=0%>
 <%@team.teammates.each do |tm|%>
-<p> игрок </p> 
+<p> игрок <%=q%></p>
+<%q=q+1%> 
   <%= f.fields_for tm, index: tm.id do |ct| %>
     <p>
       <%= ct.label :ФИО %><br>

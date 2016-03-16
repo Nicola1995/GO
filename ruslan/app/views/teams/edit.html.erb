@@ -1,0 +1,18 @@
+
+<%= form_for @team, url: team_path(@team), metod: :patch do |f| %>
+		
+ <p>
+    <%= f.label :Название %><br>
+    <%= f.text_field :name_team %>
+  </p>
+
+  <p>
+    <%= f.label :Подтверждение %><br>
+    <%= f.select(:check, options_for_select([['принять',true], ['не принять',false]])) %>
+  </p>
+
+
+ <p>
+    <%= f.submit %>
+  </p>
+<%end%>

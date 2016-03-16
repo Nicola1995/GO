@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Студенческое Го</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,43 +11,40 @@ background-color:#EFD6B6;
 }
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- My Styles -->
+	<link href="nicola.css" rel="stylesheet">
+	<script src="index.js"></script>
 </head>
 <body>
+   
+	<div  class="e-header">	
+	<div class="e-menuDiv">
+	<%= link_to 'Новости', articles_path, class:"e-menuA" %>
+        <%= link_to 'Чемпионат', champs_path, class:"e-menuA"  %>
+        <a href = "#" class="e-menuA" > Обучение</a>
+        <%= link_to 'Контакты', contakts_path, class:"e-menuA"  %> 
+
+	</div><!-- e-menuDiv-->
+	</div><!-- e-header -->
+
+	<div class="e-slideBox">
+	<img id="slide1" src="assets/1.jpg" class="e-slide" >
+	<img id="slide2" src="assets/2.jpg" class="e-slide" >
+	<img id="slide3" src="assets/3.png" class="e-slide" >
+	<img id="slide4" src="assets4.jpg" class="e-slide" >
+	</div><!-- e-slideBox-->	
 
 
-<div class = "row">
-<center><h1>Здесь будет логотип</h1></center>
-</div>
-
-<div class = "navbar navbar-default" role = "navigation">
-  <ul class = "nav navbar-nav navbar-center">
-    <li> <%= link_to 'Новости', articles_path %></li>
-    <li>  <%= link_to 'Чемпионат', champs_path %></li>
-    <li><a> Обучение</a></li>
-    <li>  <%= link_to 'Контакты', contakts_path %> </li>
-
-  </ul>
     
 
-</div>
 
-
-<div style="position:relative;">
-<div style="position:absolute; left:25%; right:25%; border: solid 1px #AE8E8E;">
-
+<div class="e-content" >
 <%= yield %>
-
 </div>
-<div style="position:absolute; right:75%; left:0%;">
-Здесь будет картинка, связанная с го
-</div>
-<div style="position:absolute; left:75%; right:0%; ">
-Здесь также будет картинка
-</div>
-</div>
-<div>
-
-</div> 
-
 </body>
 </html>

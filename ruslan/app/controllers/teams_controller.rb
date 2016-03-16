@@ -2,6 +2,11 @@ class TeamsController < ApplicationController
 	def index
 		@teams = Team.all
 	end
+	
+	def addel
+		@teams = Team.all
+	end
+	
 	def new
 		@team = Team.new
 		6.times { @team.teammates.build}
@@ -10,6 +15,10 @@ class TeamsController < ApplicationController
 	end
 	def show
 		@teams = Team.all		
+	end
+	
+	def edit
+	    @team = Team.find(params[:id])	
 	end
 	
 	def destroy
@@ -22,10 +31,16 @@ class TeamsController < ApplicationController
 	def post_create
 	
 	end
-
+	
+	def update
+		@team = Team.find(params[:id])
+		@team.update(teamparams)
+		redirect_to teams_addel_path	
+	end
+	
 	def create
 	   
-	   @team = Team.new(teamparams)
+	   @team = Team.new(teamparams,check: false)
 	   @team.save
 	   loc = params[:team][:manager]
 	   @team.create_manager(name: loc[:name], univercity: loc[:univercity], kontakts: loc[:kontakts], position: loc[:position])
@@ -39,7 +54,7 @@ class TeamsController < ApplicationController
 	end
 
 	private def teamparams
-		params.require(:team).permit(:name_team)
+		params.require(:team).permit(:name_team, :check)
 	end
 	
 

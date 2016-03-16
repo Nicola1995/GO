@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   get 'articles/addel'
+  get 'teams/addel'
   resources :articles
   resources :articles do
 	resources :pictures

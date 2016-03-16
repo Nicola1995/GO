@@ -16,6 +16,18 @@
 //= require_tree .
 
 ﻿var mates_num = 3;
+var slideNum = 3;
+
+function slideRefresh() {
+	var picNames = ['/images/slide1', '/images/slide2', '/images/slide3', '/images/slide4'];
+	document.getElementById(picNames[slideNum]).style.display = 'none';
+	slideNum = (slideNum + 1) % 4;
+	document.getElementById(picNames[slideNum]).style.display = 'block';   
+	//alert('works');
+}
+
+setInterval(slideRefresh, 3000);
+
 
 function getXmlHttp() {
     var xmlhttp;
@@ -90,7 +102,7 @@ function onClick()
 		dataSet.teammates[i].name = document.getElementById(item).getElementsByTagName('input')[0].value;
 	});
 	//alert(JSON.stringify(dataSet));
-	myPost("new", JSON.stringify(dataSet));
+	myPost("create", JSON.stringify(dataSet));
 	
 	/*
 	alert('works');

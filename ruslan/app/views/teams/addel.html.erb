@@ -1,0 +1,44 @@
+<% @teams.each do |team| %>
+<div>
+	<p> 
+	   название <%=team.name_team%>
+	</p>
+	<p> 
+	   имя менеджера <%if team.manager!= nil %> <%=team.manager.name%> <%end%>
+	</p>
+	<p> 
+	    должность <%if team.manager!= nil %> <%=team.manager.position%> <%end%>
+	</p>
+
+	<p> 
+	    контакты <%if team.manager!= nil %> <%=team.manager.kontakts%> <%end%>
+	</p>
+		
+	<%team.teammates.each do |tm|%>	
+	<%if tm.name != ""%>	
+	<p> 
+	   имя <%=tm.name%>
+	</p>
+	<p> 
+	   уровень <%=tm.level%>
+	</p>
+	<%end%>
+	<%end%>
+<p>
+<%= link_to 'Destroy', team_path(team),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+</p>
+
+<p>
+<%= link_to 'Edit', edit_team_path(team) %>
+
+</p>
+
+
+
+</div>
+
+  <% end %>
+

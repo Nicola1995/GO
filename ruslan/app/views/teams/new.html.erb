@@ -28,9 +28,10 @@
    <% end %>
 
  
-
+<%q=1%>
 <%@team.teammates.each do |tm|%>
-<p> игрок </p> 
+<p> игрок <%=q%></p>
+<%q=q+1%> 
   <%= f.fields_for tm, index: tm.id do |ct| %>
     <p>
       <%= ct.label :ФИО %><br>

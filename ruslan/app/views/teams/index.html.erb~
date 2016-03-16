@@ -1,41 +1,23 @@
-Положение об европейсокм чемпионате.
 
-регистарция
-просмотр всех команд
-
-
-
-
-<%= javascript_tag do %>
-  window.articlesURL = '<%= j articles_url %>';
-  window.articles = <%= raw Article.all.to_json %>
-<% end %>
-  <% @teams.each do |team| %>
-<div>
-	<p> 
-	   название <%=team.name_team%>
-	</p>
-	<p> 
-	   имя менеджера <%if team.manager!= nil %> <%=team.manager.name%> <%end%>
-	</p>
+<table>
+<td>
+	<tr>Название </tr>
+	<tr>Участники </tr>
+	<tr> подтверждено </tr>
+	
 		
+</td>
+ <% @teams.each do |team| %>
+<td>
+	<tr> <%=team.name_team%> </tr>
+	<tr>		
 	<%team.teammates.each do |tm|%>	
-	<%if tm.name != ""%>	
-	<p> 
-	   имя <%=tm.name%>
-	</p>
-	<p> 
-	   уровень <%=tm.level%>
-	</p>
+	  <%if tm.name != ""%>	 
+	    <%=tm.name%> ,
+	  <%end%>
 	<%end%>
-	<%end%>
-<p>
-<%= link_to 'Destroy', team_path(team),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-
-</p>
-</div>
-
+	</tr>
+	<tr> <%if team.check%> Подтверждено <%else%> Не подтверждено <%end%> </tr>
+</td>
   <% end %>
-
+</table>
