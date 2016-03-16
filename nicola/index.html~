@@ -17,9 +17,19 @@
     <![endif]-->
 	<!-- My Styles -->
 	<link href="index.css" rel="stylesheet">
+  <script>
+	function onScrolled()
+	{
+		//alert('jopaa');
+	  var el = window.document.getElementById("myHeader");
+	  
+//var b = document.getElementById('myBody');
+	  el.setAttribute('visibility', 'visible');//(b.style.top < 0) ? '' : 'none';
+	}
+  </script>
   </head>
   <body>
-	<div class="e-header">	
+	<div  class="e-header">	
 	<div class="e-menuDiv">
 	<a class="e-menuA" href="#">Новости</a>
 	<a class="e-menuA" href="#">Контакты</a>
@@ -29,7 +39,7 @@
 	</div><!-- e-header -->
     <div class="e-content" >
 	<div class="e-newsPost">
-	<div class="e-newsHeader">
+	<div  class="e-newsHeader">
 		<div class="e-newsTitle">
 			Первая новость с очень преочень длинным и бестолковым названием
 		</div><!-- e-newsTitle -->
@@ -37,6 +47,11 @@
 			16.03.2016
 		</div><!-- e-newsDate -->
 	</div><!-- e-newsHeader -->
+	<div class="e-newsBody">
+	<p>
+	Тело у осьминогов короткое, мягкое, сзади овальное. Ротовое отверстие расположено в месте, где сходятся его щупальца, а анальное отверстие — открывается под мантией. Мантия напоминает морщинистый кожаный мешок. Рот осьминога снабжён двумя мощными челюстями, похожими на клюв попугая. В глотке имеется тёрка (радула), которая перетирает пищу.
+	</p>
+	</div><!-- e-newsBody -->
 	</div><!-- e-newsPost -->
 	</div><!-- e-content -->
   </body>

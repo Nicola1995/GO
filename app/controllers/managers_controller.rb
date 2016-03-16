@@ -4,13 +4,14 @@ class ManagersController < ApplicationController
 	    @manager = @team.manager.build
 
 	end	
+
 	def create
 	    @manager = Manager.new(manager_params)
 	    @teammate.safe	   
 	end
 private
   def manager_params
-    params.require(:name).permit(:univercity, :kontakts, :position)
+    params.require(:manager).permit(:name,:univercity, :kontakts, :position)
   end
 
 end

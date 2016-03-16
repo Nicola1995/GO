@@ -11,4 +11,24 @@
   window.articles = <%= raw Article.all.to_json %>
 <% end %>
 
+<div>
+  <% @teams.each do |team| %>
+	<p> 
+	   название <%=team.name_team%>
+	</p>
+	<p> 
+	   имя менеджера  <%=team.manager.name%> 
+	</p>
+		
+	<%team.teammates.each do |tm|%>	
+	<p> 
+	   имя <%=tm.name%>
+	</p>
+	<p> 
+	   уровень <%=tm.level%>
+	</p>
+	<%end%>
+
+  <% end %>
+</div>
 

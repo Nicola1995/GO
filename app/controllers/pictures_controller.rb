@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   def index
 
-    @article = Article.find(params[:gallery_id])
+    @article = Article.find(params[:article_id])
 
     @pictures = @article.pictures
 
@@ -100,7 +100,7 @@ class PicturesController < ApplicationController
 
   def make_default
     @picture = Picture.find(params[:id])
-    @article = Article.find(params[:gallery_id])
+    @article = Article.find(params[:article_id])
 
     @article.cover = @picture.id
     @article.save

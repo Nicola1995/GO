@@ -4,6 +4,9 @@ class TeamsController < ApplicationController
 	end
 	def new
 		@team = Team.new
+		6.times { @team.teammates.build}
+		@team.build_manager
+		
 	end
 	def show
 		@teams = Team.all		
@@ -17,18 +20,19 @@ class TeamsController < ApplicationController
 	   
 	   @team = Team.new(teamparams)
 	   @team.save
-	   @team.manager.create(params[:manager])
-	  
-	   params[:teammates].each{|teammate|
-    	     @team.teammates.create(teammate)
+	   loc = params[:team][:manager]
+	   @team.create_manager(name: loc[:name], univercity: loc[:univercity])
+	     
+	   params[:team][:teammate].each{|teammate|
+    	     @team.teammates.create(name: teammate[:name], level: teammate[:level])
 	   }
 	   
-	   redirect_to champs
+	   redirect_to champs_path
 	   
 	end
 
 	private def teamparams
-		params.require(:team)
+		params.require(:team).permit(:name_team)
 	end
 	
 

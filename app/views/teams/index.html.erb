@@ -14,10 +14,10 @@
 <div>
   <% @teams.each do |team| %>
 	<p> 
-	   название <%=team.name%>
+	   название <%=team.name_team%>
 	</p>
 	<p> 
-	   имя менеджера <%=team.manager.name%>
+	   имя менеджера <%if team.manager!= nil %> <%=team.manager.name%> <%end%>\
 	</p>
 		
 	<%team.teammates.each do |tm|%>	
@@ -25,7 +25,7 @@
 	   имя <%=tm.name%>
 	</p>
 	<p> 
-	   имя <%=tm.level%>
+	   уровень <%=tm.level%>
 	</p>
 	<%end%>
 

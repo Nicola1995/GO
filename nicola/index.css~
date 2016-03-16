@@ -73,7 +73,11 @@ body {
 }
 
 .e-content {
-	padding-top: 110px;
+<<<<<<< HEAD
+	padding-top: 210px;
+=======
+	padding-top: 60px;
+>>>>>>> 93d219168a93550f99d87022f6e68f74eef4b514
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 0;
