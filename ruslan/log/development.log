@@ -25168,3 +25168,30 @@ Started GET "/teams/new" for 127.0.0.1 at 2016-03-16 20:26:05 +0300
 Processing by TeamsController#new as HTML
   Rendered teams/new.html.erb within layouts/application (149.9ms)
 Completed 200 OK in 592ms (Views: 406.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 22:55:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 1645ms (Views: 1588.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-16 22:55:49 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 208ms (Views: 205.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2016-03-16 22:55:51 +0300
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (137.6ms)
+Completed 200 OK in 736ms (Views: 470.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-03-16 22:55:55 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.3ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mPicture Load (0.9ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (179.5ms)
+Completed 200 OK in 503ms (Views: 479.7ms | ActiveRecord: 5.9ms)
