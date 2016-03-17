@@ -155,7 +155,7 @@
 <a onClick="addPlayer()" > Добавить игрока </a>
 <br><br>
  <p>
-    <input type="submit" name="commit" value="Create Team" />
+    <input class="e-regSubmit" type="submit" name="commit" value="Create Team" />
   </p>
 </form>
 

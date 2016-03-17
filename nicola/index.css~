@@ -141,6 +141,19 @@ body {
 
 /* Форма для регистрации */
 
+
+.e-contentGrey {
+	padding-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	min-width: 400px;
+	max-width: 55%;	
+	position: relative;
+	background-color: #EAF7EA;/*#E9FFE9;/*#F9F7E6;/*#F9F8F6;*/
+}
+
+
 .e-registrationForm {
 	padding-top: 20px;	
 	margin-left: 5%;
@@ -179,6 +192,12 @@ body {
    font-size: 14px; /* Размер шрифта*/
 /*   font-family: Tahoma; /* Стиль шрифта*/
 }
+.e-regTextInput:focus {
+	border: solid 1px blue;
+	-webkit-box-shadow: 0px 0px 1.5px 2.5px rgba(0,0,255,0.23);
+	-moz-box-shadow: 0px 0px 1.5px 2.5px rgba(0,0,255,0.23);
+	box-shadow: 0px 0px 1.5px 2.5px rgba(0,0,255,0.23);
+}
 
 .e-regSelect {
 	width: 230px;
@@ -213,7 +232,7 @@ body {
    /*-webkit-border-radius: 3px; //закругление углов (Google Chrome)
    -moz-border-radius: 3px; //закругление углов (FireFox)
    -khtml-border-radius: 3px; //закругление углов (Safari)*/
-   background: #0A0 !important; /* желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым*/
+   background: #070 !important; /* желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым*/
    outline: none; /* удаляет обводку в браузерах хром(желтая) и сафари(синяя)*/
    
    
@@ -222,3 +241,5 @@ body {
 /*   font-family: Tahoma; /* Стиль шрифта*/
 	
 }
+
+
