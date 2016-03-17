@@ -31,7 +31,13 @@ class TeamsController < ApplicationController
 	def post_create
 	
 	end
-
+	
+	def update
+		@team = Team.find(params[:id])
+		@team.update(teamparams)
+		redirect_to teams_addel_path	
+	end
+	
 	def create
 	   
 	   @team = Team.new(teamparams,check: false)
@@ -48,7 +54,7 @@ class TeamsController < ApplicationController
 	end
 
 	private def teamparams
-		params.require(:team).permit(:name_team)
+		params.require(:team).permit(:name_team, :check)
 	end
 	
 

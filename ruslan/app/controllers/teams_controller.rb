@@ -43,10 +43,10 @@ class TeamsController < ApplicationController
 	   @team = Team.new(teamparams,check: false)
 	   @team.save
 	   loc = params[:team][:manager]
-	   @team.create_manager(name: loc[:name], univercity: loc[:univercity], kontakts: loc[:kontakts], position: loc[:position])
+	   @team.create_manager(name: loc[:name],lastname: loc[:lastname],familyname: loc[:familyname] , univercity: loc[:univercity], kontakts: loc[:kontakts], position: loc[:position], email: loc[:email])
 	     
 	   params[:team][:teammate].each{|teammate|
-    	     @team.teammates.create(name: teammate[:name], level: teammate[:level])
+    	     @team.teammates.create(name: teammate[:name],familyname: teammate[:familyname],lastname: teammate[:lastname], level: teammate[:level],email: teammate[:email])
 	   }
 	   
 	   redirect_to champs_path
@@ -54,7 +54,7 @@ class TeamsController < ApplicationController
 	end
 
 	private def teamparams
-		params.require(:team).permit(:name_team, :check)
+		params.require(:team).permit(:name_team, :check, :message)
 	end
 	
 

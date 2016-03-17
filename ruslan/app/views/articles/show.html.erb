@@ -11,7 +11,7 @@
 	<% par.split("<pic>").each do |m_par| %>
 	  <%= m_par %>
           <%if @article.pictures[qw]!= nil %>
- 		<%= image_tag @article.pictures[qw].image.url(:thumb) %>
+ 		<%= image_tag @article.pictures[qw].image.url(:thumb),class:"e-img" %>
 	  <%end%>
 	  <% qw+=1 %>
         <%end%>

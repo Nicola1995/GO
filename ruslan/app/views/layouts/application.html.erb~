@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <style>
+   <style>
 body{
 background-color:#EFD6B6;
 }
@@ -24,6 +24,8 @@ background-color:#EFD6B6;
    
 	<div  class="e-header">	
 	<div class="e-menuDiv">
+	<%= link_to 'Главная', welcome_index, class:"e-menuA" %>
+
 	<%= link_to 'Новости', articles_path, class:"e-menuA" %>
         <%= link_to 'Чемпионат', champs_path, class:"e-menuA"  %>
         <a href = "#" class="e-menuA" > Обучение</a>
@@ -31,13 +33,6 @@ background-color:#EFD6B6;
 
 	</div><!-- e-menuDiv-->
 	</div><!-- e-header -->
-
-	<div class="e-slideBox">
-	<img id="slide1" src="app/assets/images/1.jpg" class="e-slide" >
-	<img id="slide2" src="app/assets/images/2.jpg" class="e-slide" >
-	<img id="slide3" src="app/assets/images/3.png" class="e-slide" >
-	<img id="slide4" src="app/assets/images/4.jpg" class="e-slide" >
-	</div><!-- e-slideBox-->	
 
 
     

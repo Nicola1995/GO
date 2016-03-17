@@ -1,12 +1,10 @@
-
-<h1>Студенческое Го</h1>
-
-
-<div>
   <% @articles.reverse.each do |article| %>
-    <div style = "border:solid;">
-      <center><h2><%= article.title %></h2></center>
-      <p> <%=article.created_at%></p>
+    <div class="e-newsPost">
+      <div  class="e-newsHeader">
+        <div class="e-newsTitle"> <%= article.title %> </div>
+        <div class="e-newsDate"> <%=article.created_at%></div>
+      </div>
+<div class="e-newsBody">
  <% qw=0 %>   
   <% par =article.text.split("<br>")[0] %>
      <p>
@@ -19,9 +17,8 @@
         <%end%>
     </p>
 
-      <a><%= link_to 'Новость целиком', article_path(article) %></a>
-    </div>
-    
+      <%= link_to 'Новость целиком', article_path(article) %>
+  </div>
+ </div>
   <% end %>
-</div>
 

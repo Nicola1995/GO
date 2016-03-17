@@ -1,5 +1,5 @@
 
-<table>
+<table border="5" cellpadding="1" style = "font-size: 20px;">
 <tr>
 	<td>Название </td>
 	<td>Участники </td>
@@ -10,14 +10,22 @@
  <% @teams.each do |team| %>
 <tr>
 	<td> <%=team.name_team%> </td>
-	<td>		
+	<td>	
+	<%qw = 0%>	
 	<%team.teammates.each do |tm|%>	
 	  <%if tm.name != ""%>	 
-	    <%=tm.name%> ,
+	    <%=tm.name%> 
+		<%if @teams[qw+1]!=nil%>, <%end%>
 	  <%end%>
+	  <%qw=qw+1%>
 	<%end%>
 	</td>
-	<td> <%if team.check%> Подтверждено <%else%> Не подтверждено <%end%> </td>
+	<td> <%if team.check%> 
+		<im style = "color:green;">Подтверждено </im> 
+	     <%else%> 
+		<im style = "color:red;">Не подтверждено </im>
+	     <%end%> 
+	</td>
 </tr>
   <% end %>
 </table>

@@ -10,7 +10,7 @@ class TeammatesController < ApplicationController
 	end
 private
   def teammate_params
-    params.require(:teammate).permit(:name,:univercity, :kontakts, :level)
+    params.require(:teammate).permit(:name,:lastname, :secondname, :email, :level)
   end
 
 end

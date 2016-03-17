@@ -8,5 +8,5 @@
 <br/>
 
 
-<a href="#" onclick="paintIt(this, '#990000')">Paint it red</a>
+<a href="#" onclick="paintIt(this, 'red')">Paint it red</a>
 
