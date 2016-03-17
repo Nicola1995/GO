@@ -66,8 +66,8 @@
 	</div>
 	<h3 class="e-regSubTitle"> Общая информация о команде </h3>			
  <p>
-    <label for="team_Название">Название</label><br>
-    <input type="text" name="team[name_team]" id="team_name_team" />
+    <!--label for="team_Название">Название</label><br-->
+    <input class="e-regTextInput" placeholder="Название команды" type="text" name="team[name_team]" id="team_name_team" />
   </p>
 
 <h3 class="e-regSubTitle"> Менеджер </h3>
@@ -75,95 +75,83 @@
   
     <p>
       <!--label for="team_manager_ФИО">ФИО</label><br-->
-      <input placeholder="ФИО" type="text" name="team[manager][name]" id="team_manager_name" />
+      <input class="e-regTextInput" placeholder="ФИО" type="text" name="team[manager][name]" id="team_manager_name" />
     </p>
     <p>
       <!--label for="team_manager_университет">университет</label><br-->
-      <input placeholder="университет" type="text" name="team[manager][univercity]" id="team_manager_univercity" />
+      <input class="e-regTextInput" placeholder="университет" type="text" name="team[manager][univercity]" id="team_manager_univercity" />
     </p>
     <p>
       <!--label for="team_manager_контакты">контакты</label><br-->
-      <input placeholder="контакты" type="text" name="team[manager][kontakts]" id="team_manager_kontakts" />
+      <input class="e-regTextInput" placeholder="контакты" type="text" name="team[manager][kontakts]" id="team_manager_kontakts" />
     </p>
-    <p>
-	<label for="team_manager_должность">должность</label><br>	
-	<select name="team[manager][position]" id="team_manager_position"><option value="ректор">ректор</option>
+    <div>
+	<label class="e-regSelectLabel" for="team_manager_должность">Статус в университете:</label><br>	
+	<div class="e-regSelectDiv">	
+	<select class="e-regSelect" name="team[manager][position]" id="team_manager_position"><option value="ректор">ректор</option>
 <option value="студент">студент</option>
 <option value="преподаватель">преподаватель</option></select>
-    </p>
+	</div><!-- e-regSelectDiv -->
+    </div>
+
+
+	<h3 class="e-regSubTitle"> Состав команды </h3>
+	<div class="e-regPar">
+		Заполните информацию о составе команды. Контактные данные могут быть использованы для связи с игроками.
+		Контактные данные не будут видны всем посетителям сайта. Если в команде выступают более трех человек, воспользуйтесь кнопкой "добавить игрока".
+	</div>
 
 <div class="e-playerInfo"> 
-<p> игрок 1</p>
-  
+  	<h4 class="e-regSubTitle"> Игрок 1 </h4>
     <p>
-      <label for="team_teammate__ФИО">ФИО</label><br>
-      <input type="text" name="team[teammate][][name]" id="team_teammate__name" />
+      <input class="e-regTextInput" placeholder="ФИО" type="text" name="team[teammate][][name]" id="team_teammate__name" />
     </p>
     <p>
-      <label for="team_teammate__рейтинг">рейтинг</label><br>
-      <input type="text" name="team[teammate][][level]" id="team_teammate__level" />
+      <input class="e-regTextInput" placeholder="рейтинг" type="text" name="team[teammate][][level]" id="team_teammate__level" />
     </p>
 </div><!-- e-playerInfo -->
 <div class="e-playerInfo">
-<p> игрок 2</p>
-  
+  	<h4 class="e-regSubTitle"> Игрок 2 </h4>
     <p>
-      <label for="team_teammate__ФИО">ФИО</label><br>
-      <input type="text" name="team[teammate][][name]" id="team_teammate__name" />
+      <input class="e-regTextInput" placeholder="ФИО" type="text" name="team[teammate][][name]" id="team_teammate__name" />
     </p>
     <p>
-      <label for="team_teammate__рейтинг">рейтинг</label><br>
-      <input type="text" name="team[teammate][][level]" id="team_teammate__level" />
+      <input class="e-regTextInput" placeholder="рейтинг" type="text" name="team[teammate][][level]" id="team_teammate__level" />
     </p>
 </div><!-- e-playerInfo -->
 <div class="e-playerInfo">
-<p> игрок 3</p>
-  
+  	<h4 class="e-regSubTitle"> Игрок 3 </h4>
     <p>
-      <label for="team_teammate__ФИО">ФИО</label><br>
-      <input type="text" name="team[teammate][][name]" id="team_teammate__name" />
+      <input class="e-regTextInput" placeholder="ФИО" type="text" name="team[teammate][][name]" id="team_teammate__name" />
     </p>
     <p>
-      <label for="team_teammate__рейтинг">рейтинг</label><br>
-      <input type="text" name="team[teammate][][level]" id="team_teammate__level" />
-    </p>
-</div><!-- e-playerInfo -->
+      <input class="e-regTextInput" placeholder="рейтинг" type="text" name="team[teammate][][level]" id="team_teammate__level" />
+    </p></div><!-- e-playerInfo -->
 <div id="player4" class="e-playerInfo">
-<p> игрок 4</p>
-  
+  	<h4 class="e-regSubTitle"> Игрок 4 </h4>
     <p>
-      <label for="team_teammate__ФИО">ФИО</label><br>
-      <input type="text" name="team[teammate][][name]" id="team_teammate__name" />
+      <input class="e-regTextInput" placeholder="ФИО" type="text" name="team[teammate][][name]" id="team_teammate__name" />
     </p>
     <p>
-      <label for="team_teammate__рейтинг">рейтинг</label><br>
-      <input type="text" name="team[teammate][][level]" id="team_teammate__level" />
-    </p>
-</div><!-- e-playerInfo -->
+      <input class="e-regTextInput" placeholder="рейтинг" type="text" name="team[teammate][][level]" id="team_teammate__level" />
+    </p></div><!-- e-playerInfo -->
 <div id="player5" class="e-playerInfo">
-<p> игрок 5</p>
-  
+  	<h4 class="e-regSubTitle"> Игрок 5 </h4>
     <p>
-      <label for="team_teammate__ФИО">ФИО</label><br>
-      <input type="text" name="team[teammate][][name]" id="team_teammate__name" />
+      <input class="e-regTextInput" placeholder="ФИО" type="text" name="team[teammate][][name]" id="team_teammate__name" />
     </p>
     <p>
-      <label for="team_teammate__рейтинг">рейтинг</label><br>
-      <input type="text" name="team[teammate][][level]" id="team_teammate__level" />
+      <input class="e-regTextInput" placeholder="рейтинг" type="text" name="team[teammate][][level]" id="team_teammate__level" />
     </p>
 </div><!-- e-playerInfo -->
 <div id="player6" class="e-playerInfo">
-<p> игрок 6</p>
-  
+  	<h4 class="e-regSubTitle"> Игрок 6 </h4>
     <p>
-      <label for="team_teammate__ФИО">ФИО</label><br>
-      <input type="text" name="team[teammate][][name]" id="team_teammate__name" />
+      <input class="e-regTextInput" placeholder="ФИО" type="text" name="team[teammate][][name]" id="team_teammate__name" />
     </p>
     <p>
-      <label for="team_teammate__рейтинг">рейтинг</label><br>
-      <input type="text" name="team[teammate][][level]" id="team_teammate__level" />
-    </p>
-</div><!-- e-playerInfo -->
+      <input class="e-regTextInput" placeholder="рейтинг" type="text" name="team[teammate][][level]" id="team_teammate__level" />
+    </p></div><!-- e-playerInfo -->
 <a onClick="addPlayer()" > Добавить игрока </a>
 <br><br>
  <p>

@@ -155,9 +155,70 @@ body {
 }
 
 .e-regSubTitle {
-	border-bottom: solid 1px;
+	/*border-bottom: solid 1px;*/
 }
 
 .e-regPar {
 	padding-top: 10px;
+}
+
+.e-regTextInput {
+	min-width: 300px;
+	width: 80%;
+	height: 28px; /* высота на свое усмотрение*/	
+	border: 1px solid #090; /*/цвет рамки*/
+    border-radius: 0px; /*закругление углов (общее)*/
+   /*-webkit-border-radius: 3px; //закругление углов (Google Chrome)
+   -moz-border-radius: 3px; //закругление углов (FireFox)
+   -khtml-border-radius: 3px; //закругление углов (Safari)*/
+   background: #ffffff !important; /* желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым*/
+   outline: none; /* удаляет обводку в браузерах хром(желтая) и сафари(синяя)*/
+   
+   
+   color: #040; /*цвет шрифта в обычном состоянии*/
+   font-size: 14px; /* Размер шрифта*/
+/*   font-family: Tahoma; /* Стиль шрифта*/
+}
+
+.e-regSelect {
+	width: 230px;
+	height: 28px;
+	border: none;	
+	border-radius: 0px;
+	outline: none;
+	color: #040;
+	font-size: 14px;
+	background: transparent;
+}
+
+.e-regSelectDiv {
+	border: 1px solid #090;
+	position: relative;
+	width: 200px;
+	overflow: hidden;
+	background: url(icons/arrowDown.png) no-repeat right #fff;	
+}
+
+.e-regSelectLabel {
+	font-size: 14px;
+	color: #040;
+}
+
+.e-regSubmit {
+	min-width: 300px;
+	width: 80%;
+	height: 28px; /* высота на свое усмотрение*/	
+	border: 1px solid #090; /*/цвет рамки*/
+    border-radius: 0px; /*закругление углов (общее)*/
+   /*-webkit-border-radius: 3px; //закругление углов (Google Chrome)
+   -moz-border-radius: 3px; //закругление углов (FireFox)
+   -khtml-border-radius: 3px; //закругление углов (Safari)*/
+   background: #0A0 !important; /* желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым*/
+   outline: none; /* удаляет обводку в браузерах хром(желтая) и сафари(синяя)*/
+   
+   
+   color: #AFA; /*цвет шрифта в обычном состоянии*/
+   font-size: 14px; /* Размер шрифта*/
+/*   font-family: Tahoma; /* Стиль шрифта*/
+	
 }
