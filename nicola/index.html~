@@ -34,7 +34,7 @@
 	<img id="slide1" src="pictures/1.jpg" class="e-slide" >
 	<img id="slide2" src="pictures/2.jpg" class="e-slide" >
 	<img id="slide3" src="pictures/3.png" class="e-slide" >
-	<img id="slide0" src="pictures/4.jpg" class="e-slide" >
+	<img id="slide4" src="pictures/4.jpg" class="e-slide" >
 	</div><!-- e-slideBox-->	
 
     <div class="e-content" >
