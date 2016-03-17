@@ -38,13 +38,12 @@
     </p>
     <p>
       <%= ct.label :Должность %><br>     
-      <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]), :class=>"e-regSelect") %>
+      <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]),{},{ :class=>"e-regSelect"}) %>
     </p>
     <p>
       <%= ct.text_field :kontakts, class:"e-regTextInput", placeholder:"Телефон"%>
     </p> 
     <p>
-      <%= ct.label :email %><br>
       <%= ct.email_field :email, class:"e-regTextInput", placeholder:"Email" %>
     </p>
    <% end %>

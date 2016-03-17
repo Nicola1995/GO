@@ -242,4 +242,20 @@ body {
 	
 }
 
+/* Таблица зарегистрированных команд */
+
+.e-table {
+	width: 100%;
+}
+
+.e-tableHead {
+	background-color: #7A7;
+}
+.e-tableRow1 {
+	background-color: white;
+}
+
+.e-tableRow2 {
+	background-color: #DED;
+}
 

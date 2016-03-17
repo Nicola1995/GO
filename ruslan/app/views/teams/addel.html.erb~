@@ -1,44 +1,40 @@
+<ol>
 <% @teams.each do |team| %>
-<div>
-	<p> 
-	   название <%=team.name_team%>
-	</p>
-	<p> 
-	   имя менеджера <%if team.manager!= nil %> <%=team.manager.name%> <%end%>
-	</p>
-	<p> 
-	    должность <%if team.manager!= nil %> <%=team.manager.position%> <%end%>
-	</p>
-
-	<p> 
-	    контакты <%if team.manager!= nil %> <%=team.manager.kontakts%> <%end%>
-	</p>
-		
+<li><ul>
+ 	<li> название: <%=team.name_team%> </li>
+	
+        <li> сoобщение:  <%=team.message%> </li>
+	<%if team.manager!= nil %>
+        <li> 
+	   менеджер:  
+	    <ul>
+		<li> имя: <%=team.manager.familyname%> <%=team.manager.name%> <%=team.manager.secondname%> </li>
+		<li> университет: <%=team.manager.univercity%> </li>
+	       <li> должность: <%=team.manager.position%> </li>
+	  	<li> телефон: <%=team.manager.kontakts%> </li>
+	  	<li> email: <%=team.manager.email%> </li>
+            </ul>		
+	</li>
+	<%end%>
+	
+<li>
+        Участники
+	<ul>
 	<%team.teammates.each do |tm|%>	
-	<%if tm.name != ""%>	
-	<p> 
-	   имя <%=tm.name%>
-	</p>
-	<p> 
-	   уровень <%=tm.level%>
-	</p>
+	<li> [<%=tm.lastname%> <%=tm.secondname%> <%=tm.name%> <%=tm.secondname%>, 
+	   уровень="<%=tm.level%>", email = <%=tm.email%>] </li>
 	<%end%>
-	<%end%>
-<p>
+	</ul>
+</li>
+
+<li>
 <%= link_to 'Destroy', team_path(team),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
-
-</p>
-
-<p>
+<li>
 <%= link_to 'Edit', edit_team_path(team) %>
-
-</p>
-
-
-
-</div>
-
+</li>
+</li>
+</ul>
   <% end %>
-
+</ol>

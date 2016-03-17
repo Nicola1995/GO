@@ -64,10 +64,10 @@
 <%q=q+1%> 
   <%= f.fields_for tm, index: tm.id do |ct| %>
     <p>
-      <%= ct.text_field :name, class:"e-regTextInput", placeholder:"Email" %>
+      <%= ct.text_field :name, class:"e-regTextInput", placeholder:"Имя" %>
     </p>
    <p>
-      <%= ct.text_field :lastname, class:"e-regTextInput", placeholder:"Имя" %>
+      <%= ct.text_field :lastname, class:"e-regTextInput", placeholder:"Фамилия" %>
     </p>
    <p>
       <%= ct.text_field :secondname, class:"e-regTextInput", placeholder:"Отчество" %>
