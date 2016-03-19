@@ -46,8 +46,8 @@ function onResize()
 	var W = document.documentElement.clientWidth;
 	if (W >= 700)
 		setDesktopStyle(W, H);
-	var imgW = 1920; //800.0;	
-	var imgH = 1080; //788.0;	
+	var imgW = 800.0;	
+	var imgH = 788.0;	
 	var scaleX = W / imgW;
 	var scaleY = H / imgH;
 	var scale = 1.0;	

@@ -1,0 +1,31 @@
+body {
+	background-image: url('../template/bg.jpg');
+	background-attachment: fixed;
+}
+
+#topMenu {
+	height: 70px;
+	width: 100%;
+	display: table;
+	text-align: center;
+}
+
+#topMenu a {
+	display: table-cell;
+	vertical-align: middle;
+	color: #FEF;
+	font-size: 24px;
+	font-family: 'helvetica neue';
+}
+
+#cont1 {
+	margin-top: 100px;
+	height: 600px;
+	min-width: 600px;
+	max-width: 40%;
+	margin-right: auto;
+	margin-left: auto;
+	/*border: solid 1px white;*/
+	background-color: #FFF;
+	
+}

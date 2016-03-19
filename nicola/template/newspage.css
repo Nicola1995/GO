@@ -1,0 +1,21 @@
+#mainCont {
+	margin-left: 0;		
+	margin-right: 15%;
+	background-color: white;
+	height: 100%;
+}
+
+#menuCont {
+	position: relative;
+	top: 40%;	
+	width: 100%;
+	height: 20%;
+	display: table;
+}
+
+#menuCont a {
+	display: table-cell;
+	vertical-align: middle;
+	color: #ffffec;/*#ffecff;*/
+	font-size: 20px;
+}
