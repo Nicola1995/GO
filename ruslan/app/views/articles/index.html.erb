@@ -1,5 +1,9 @@
+ <div class="e-newsTitle"> НОВОСТИ </div>
+       
+
   <% @articles.reverse.each do |article| %>
-    <div class="e-newsPost">
+  <hr style="background-color:red; height:6px; ">  
+  <div class="e-newsPost">
       <div  class="e-newsHeader">
         <div class="e-newsTitle"> <%= article.title %> </div>
         <div class="e-newsDate"> <%=article.created_at%></div>

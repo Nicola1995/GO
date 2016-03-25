@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Студенческое Го</title>
+
+    <!-- Bootstrap -->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"-->
+	<link rel="stylesheet" href="menu.css">
+	<link rel="stylesheet" href="contacts.css">
+	<script type="text/javascript"><!-- для заполнения поля с выбором -->
+		function showfield(name, otherId){
+		  if(name=='Other')document.getElementById(otherId).innerHTML='<a>Должность</a> <input type="text" name="other" />';
+		  else document.getElementById(otherId).innerHTML='';
+		}
+	</script>
+	
+  </head>
+  <body>
+	<div id="site">
+	<div id="menuCont">
+	<div id="menu">
+		<a href="#">Главная</a>
+		<a href="#">Новости</a>
+		<a href="#">Чемпионат Европы</a>
+		<a href="#">Контакты</a>
+	</div><!-- menu -->
+	</div><!-- menuCont -->
+	<div id="registrationForm">
+	<h2>Регистрация на турнир</h2>
+	<div class="fieldGroup">
+	<h3>Информация о менеджере</h3>
+	<div class="oneField">
+	<a>Фамилия</a><input placeholder="Иванов" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Имя</a><input placeholder="Иван" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Отчество</a><input placeholder="Иванович" type="text"/>
+	</div><!-- oneField -->
+	<div class="localDelim"></div>
+	<div class="longField">
+	<a>Университет</a><br><input placeholder="Петрозаводский государственный университет" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<select id="travel_arriveVia" onchange="showfield(this.options[this.selectedIndex].value, 'other1')">
+	<option selected="selected">Должность в университете ...</option>
+	<option value="Plane">Студент</option>
+	<option value="Train">Аспирант</option>
+	<option value="Own Vehicle">Преподаватель</option>
+	<option value="Other">Другое</option>
+	</select>
+	<div id="other1" class="oneField"></div>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<div class="localDelim"></div>
+	<a>Адрес почты</a><input placeholder="ivan@yahoo.com" />
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Телефон</a><input placeholder="+79997771234" type="text"/>
+	</div><!-- oneField -->
+	</div><!-- fieldGroup -->
+	
+	<!-- далее формы игроков -->
+	<!-- игрок 1 -->
+	
+	<div class="fieldGroup" id="player1">
+	<h3>Игрок 1</h3>
+	<div class="oneField">
+	<a>Фамилия</a><input placeholder="Петров" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Имя</a><input placeholder="Петр" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Отчество</a><input placeholder="Петрович" type="text"/>
+	</div><!-- oneField -->
+	<div class="localDelim"></div>
+	<div class="longField">
+	<a>Университет</a><br><input placeholder="Петрозаводский государственный университет" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<select id="travel_arriveVia" onchange="showfield(this.options[this.selectedIndex].value, 'other2')">
+	<option selected="selected">Должность в университете ...</option>
+	<option value="Plane">Студент</option>
+	<option value="Train">Аспирант</option>
+	<option value="Own Vehicle">Преподаватель</option>
+	<option value="Other">Другое</option>
+	</select>
+	<div id="other2" class="oneField"></div>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Уровень игры</a><input placeholder="18 кю" type="text"/>
+	</div><!-- oneField -->
+	<div class="localDelim"></div>
+	<div class="oneField">
+	<a>Адрес почты</a><input placeholder="petr@yahoo.com" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Телефон</a><input placeholder="+79997771243" type="text"/>
+	</div><!-- oneField -->
+	</div><!-- fieldGroup -->
+	
+	
+	<!-- игрок 2 -->
+	
+	<div class="fieldGroup" id="player2">
+	<h3>Игрок 2</h3>
+	<div class="oneField">
+	<a>Фамилия</a><input placeholder="Петров" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Имя</a><input placeholder="Петр" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Отчество</a><input placeholder="Петрович" type="text"/>
+	</div><!-- oneField -->
+	<div class="localDelim"></div>
+	<div class="longField">
+	<a>Университет</a><br><input placeholder="Петрозаводский государственный университет" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<select id="travel_arriveVia" onchange="showfield(this.options[this.selectedIndex].value, 'other3')">
+	<option selected="selected">Должность в университете ...</option>
+	<option value="Plane">Студент</option>
+	<option value="Train">Аспирант</option>
+	<option value="Own Vehicle">Преподаватель</option>
+	<option value="Other">Другое</option>
+	</select>
+	<div id="other3" class="oneField"></div>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Уровень игры</a><input placeholder="18 кю" type="text"/>
+	</div><!-- oneField -->
+	<div class="localDelim"></div>
+	<div class="oneField">
+	<a>Адрес почты</a><input placeholder="petr@yahoo.com" type="text"/>
+	</div><!-- oneField -->
+	<div class="oneField">
+	<a>Телефон</a><input placeholder="+79997771243" type="text"/>
+	</div><!-- oneField -->
+	</div><!-- fieldGroup -->
+	
+	<!-- конец форм -->
+	</div><!-- registrationForm -->
+	<div id="commandListPreview">
+	</div><!-- commandListPreview -->
+	</div><!-- site -->
+  </body>
+</html>

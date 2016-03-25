@@ -5,41 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-   <style>
-body{
-background-color:#EFD6B6;
-}
-</style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<!-- My Styles -->
-	<link href="nicola.css" rel="stylesheet">
-	<script src="index.js"></script>
+ 
+	<link rel="stylesheet" href="menu.css">
 </head>
 <body>
-   
-	<div  class="e-header">	
-	<div class="e-menuDiv">
-	<%= link_to 'Главная', welcome_index, class:"e-menuA" %>
-
-	<%= link_to 'Новости', articles_path, class:"e-menuA" %>
+   	<div id="site">
+	<div id="menuCont">
+	<div id="menu">
+		<%= link_to 'Главная', welcome_index_path, class:"e-menuA" %>
+		<%= link_to 'Новости', articles_path, class:"e-menuA" %>
         <%= link_to 'Чемпионат', champs_path, class:"e-menuA"  %>
-        <a href = "#" class="e-menuA" > Обучение</a>
+        <a href = "#"> Обучение</a>
         <%= link_to 'Контакты', contakts_path, class:"e-menuA"  %> 
+	</div><!-- menu -->
+	</div><!-- menuCont -->
+	<%= yield %>
+	</div><!-- site -->
 
-	</div><!-- e-menuDiv-->
-	</div><!-- e-header -->
-
-
-    
-
-
-<div class="e-content" >
-<%= yield %>
-</div>
 </body>
 </html>
