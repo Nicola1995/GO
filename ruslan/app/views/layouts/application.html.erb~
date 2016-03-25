@@ -2,77 +2,10 @@
 <html>
 <head>
   <title>Студенческое Го</title>
- 
-	<!-- My Styles -->
+   	<!-- My Styles -->
 <!-- menu.css -->
-<style>
-body {
-	font-family: 'Arial';
-   background: url('bg.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-#menuCont {
-	margin-top: 50px;
-	margin-left: 50px;
-	margin-right: 50px;
-	margin-bottom: 70px;
-}
-#menu {
-	display: table;
-	height: 45px;
-	width: 100%;
+<link href="menu.css" rel="stylesheet">
 	
-}
-#menu a:link {
-	display: table-cell;
-	vertical-align: middle;
-	width: 20%;
-	color: white;
-	background-color: #5187B5;
-	text-align: center;
-	text-decoration: none;
-	font-family: 'Arial';
-}
-#menu a:visited {
-	display: table-cell;
-	vertical-align: middle;
-	width: 20%;
-	color: white;
-	background-color: #5187B5;
-	text-align: center;
-	text-decoration: none;
-	font-family: 'Arial';
-}
-#menu a:hover {
-	display: table-cell;
-	vertical-align: middle;
-	width: 20%;
-	color: white;
-	background-color: rgba(4, 81, 132, 1);
-	text-align: center;
-	text-decoration: none;
-	font-family: 'Arial';
-}
-#menu a :active{
-	display: table-cell;
-	vertical-align: middle;
-	width: 20%;
-	color: white;
-	background-color: rgba(4, 81, 132, 1);
-	text-align: center;
-	text-decoration: none;
-	font-family: 'Arial';
-}
-#site {
-	width: 950px;
-	margin-left: auto;
-	margin-right: auto;
-	/*border: solid 1px white;*/
-}
-</style>	
 </head>
 <body>
    	<div id="site">
