@@ -1,0 +1,44 @@
+#contaktsCont {
+	width: 800px;
+	height: 600px;
+	margin-left:  auto;
+	margin-right: auto;
+	background-color: #FAFAFA;
+}
+#contaktsCont h2 {
+	font-size: 26px;
+	color: rgba(4, 81, 132, 1);
+	padding-top: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid rgba(4, 81, 132, 1);
+}
+#contaktsCont p {
+	font-size: 18;
+	color: #333;
+	text-align: justify;
+	margin-left: 70px;
+	margin-right: 100px;
+}
+#contaktsCont h3 {
+	font-size: 22px;
+	color: rgba(4, 81, 132, 1);
+	padding-top: 10px;
+	margin-left: 70px;
+	margin-right: 100px;
+}
+.contaktField label{
+	margin-left: 100px;
+	padding-top: 0;
+	width: 150px;
+}
+.contaktFieldL {
+	font-size: 18px;	
+	float: left;
+	color: #333;
+}
+.contaktFieldR {
+	font-size: 22px;
+	color: #000;
+}

@@ -20,10 +20,15 @@ body {
 	width: 100%;
 	
 }
+
+#menu a {
+	width: 20%;
+}
+
 #menu a:link {
 	display: table-cell;
 	vertical-align: middle;
-	width: 25%;
+	/*width: 20%;*/
 	color: white;
 	background-color: #5187B5;
 	text-align: center;
@@ -33,7 +38,7 @@ body {
 #menu a:visited {
 	display: table-cell;
 	vertical-align: middle;
-	width: 25%;
+/*	width: 25%;*/
 	color: white;
 	background-color: #5187B5;
 	text-align: center;
@@ -43,7 +48,7 @@ body {
 #menu a:hover {
 	display: table-cell;
 	vertical-align: middle;
-	width: 25%;
+	/*width: 20%;*/
 	color: white;
 	background-color: rgba(4, 81, 132, 1);
 	text-align: center;
@@ -53,7 +58,7 @@ body {
 #menu a :active{
 	display: table-cell;
 	vertical-align: middle;
-	width: 25%;
+/*	width: 25%;*/
 	color: white;
 	background-color: rgba(4, 81, 132, 1);
 	text-align: center;
