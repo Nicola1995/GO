@@ -1,0 +1,32 @@
+body {
+	background: #AAA url('bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#site {
+	position: relative;
+	min-width: 800px;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+#menu {
+	position: absolute;
+	top: 50px;	
+	height: 50px;
+	left: 50px;
+	right: 50px;
+	display: table;
+}
+
+#menu a {
+	display: table-cell;
+	vertical-align: middle;
+	color: #ffffec;/*#ffecff;*/
+	font-size: 20px;
+}
+
