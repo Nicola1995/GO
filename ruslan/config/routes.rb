@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'articles/addel'
   get 'teams/addel'
+  get 'welcome/eng'
+  get 'welcome/rus'
   resources :articles
   resources :articles do
 	resources :pictures

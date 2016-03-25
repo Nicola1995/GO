@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require registration
 var playerNum = 0;
 var pId = ["player1","player2", 'player3', 'player4', 'player5', 'player6'];
 

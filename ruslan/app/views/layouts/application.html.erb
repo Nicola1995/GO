@@ -8,10 +8,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-<link href="menu.css" rel="stylesheet">
-<link href="contakts.css" rel="stylesheet">
-<link href="teamsnew.css" rel="stylesheet">
-<script src="registration.js"></script>	
+
+
 </head>
 <body>
    	<div id="site">
@@ -19,11 +17,13 @@
 	<div id="menu">
 		<%= link_to 'Главная', welcome_index_path, class:"e-menuA" %>
 		<%= link_to 'Новости', articles_path, class:"e-menuA" %>
-        <%= link_to 'Чемпионат', champs_path, class:"e-menuA"  %>
-        <a href = "#"> Обучение</a>
-        <%= link_to 'Контакты', contakts_path, class:"e-menuA"  %> 
+        	<%= link_to 'Чемпионат', champs_path, class:"e-menuA"  %>
+      		<a href = "#"> Обучение</a>
+        	<%= link_to 'Контакты', contakts_path, class:"e-menuA"  %> 
 	</div><!-- menu -->
 	</div><!-- menuCont -->
+	<%= link_to 'русский', welcome_rus_path %>
+	<%= link_to 'english', welcome_eng_path %>		
 	<%= yield %>
 	</div><!-- site -->
 

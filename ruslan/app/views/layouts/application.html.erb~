@@ -8,9 +8,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-<link href="menu.css" rel="stylesheet">
-<link href="contakts.css" rel="stylesheet">
-<link href="teamsnew.css" rel="stylesheet">	
+
+
 </head>
 <body>
    	<div id="site">
