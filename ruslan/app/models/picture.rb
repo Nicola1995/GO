@@ -1,6 +1,6 @@
 class Picture < ActiveRecord::Base
 	belongs_to :article
-	has_attached_file :image, :styles => {:thumb => "200*200>"}
+	has_attached_file :image, :styles => {:thumb => "480*480>"}
 	
 
 	validates_attachment_presence :image

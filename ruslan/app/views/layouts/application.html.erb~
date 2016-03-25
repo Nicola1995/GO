@@ -18,13 +18,14 @@ background-color:#EFD6B6;
     <![endif]-->
 	<!-- My Styles -->
 	<link href="nicola.css" rel="stylesheet">
+	<link href="rus.css" rel="stylesheet">
 	<script src="index.js"></script>
 </head>
 <body>
    
 	<div  class="e-header">	
 	<div class="e-menuDiv">
-	<%= link_to 'Главная', welcome_index, class:"e-menuA" %>
+	<%= link_to 'Главная', welcome_index_path, class:"e-menuA" %>
 
 	<%= link_to 'Новости', articles_path, class:"e-menuA" %>
         <%= link_to 'Чемпионат', champs_path, class:"e-menuA"  %>
