@@ -1,0 +1,29 @@
+body {
+	background-image: url('bg2.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+#divTL {
+	/*border: solid 1px #F00;*/
+	height: 150px;	
+	width: 100%;	
+}
+#divTR {
+	/*border: solid 1px #0F0;*/
+	height: 150px;
+	width: 100%;
+}
+#divBL {
+/*	border: solid 1px #00F;*/
+	width: 34%;
+	float: left;
+	height: 200px;
+	display: none; 
+}
+#divBR {
+	/*border: solid 1px #FFF;*/
+	height: 200px;
+	width: 100%;
+
+}
