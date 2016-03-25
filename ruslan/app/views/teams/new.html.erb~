@@ -1,15 +1,18 @@
 
-<%= form_for @team, {url: {action: "create"}, :html => {:class => 'e-registrationForm'}} do |f| %>
-	<h2 class="e-regTitle"> Регистрация команды </h2>
-	<div class="e-regPar">
+<%= form_for @team, {url: {action: "create"}, :html => {:id => 'registrationForm'} } do |f| %>
+	<h2> Регистрация команды </h2>
+	<div class="registrationRegPar">
 		Как бы не утомляла Вас эта формочка, просим ее заполнить. Это нужно для организации чемпионата. 
 		Много полей? Ну а кому сейчас легко.
 	</div>
-	<h3 class="e-regSubTitle"> Общая информация о команде </h3>	
-    <p>
-    
-    <%= f.text_field :name_team,  class:"e-regTextInput", placeholder:"Название команды"  %>
-    </p>
+	<div class="fieldGroup">	
+	<h3> Общая информация о команде </h3>	
+
+	<div class="oneField">
+    <a>Название команды</a>
+    <%= f.text_field :name_team, placeholder:"Апельсин"  %>
+	</div>
+
      <div class="e-regPar">
 		Вы можете оставить некоторое сообщение для нас. Например о скидках для проживания.
 	</div>
@@ -17,39 +20,39 @@
    
     <%= f.text_area :message, class:"e-regTextInput" %>
   </p>
-
-
-<h3 class="e-regSubTitle"> Менеджер </h3>
+	</div>
+<div class="fieldGroup">	
+<h3> Менеджер </h3>
   
 <%= f.fields_for @team.manager do |ct| %>
-    <p>
-      <%= ct.text_field :name , class:"e-regTextInput", placeholder:"Имя" %>
-    </p>
-   <p>
-      <%= ct.text_field :familyname,class:"e-regTextInput", placeholder:"Фамилия"%>
-    </p>
-   <p>
-     
-      <%= ct.text_field :secondname, class:"e-regTextInput", placeholder:"Отчество"%>
-    </p>
-    <p>
-     
-      <%= ct.text_field :univercity, class:"e-regTextInput", placeholder:"Университет"%>
-    </p>
-    <p>
+	<div class="oneField">
+	<a>Фамилия</a>
+      <%= ct.text_field :familyname, placeholder:"Иванов"%>
+</div><div class="oneField">  
+	<a>Имя</a>	    
+      <%= ct.text_field :name , placeholder:"Иван" %>
+	</div><div class="oneField">    	
+    	<a>Отчество</a>
+      <%= ct.text_field :secondname, placeholder:"Иванович"%>
+</div><div class="oneField"> 
+    	<a>Университет</a>
+      <%= ct.text_field :univercity, placeholder:"Петрозаводский ГУ"%>
+</div><div class="oneField">     
       <%= ct.label :Должность %><br>     
-      <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]),{},{ :class=>"e-regSelect"}) %>
-    </p>
-    <p>
-      <%= ct.text_field :kontakts, class:"e-regTextInput", placeholder:"Телефон"%>
-    </p> 
-    <p>
-      <%= ct.email_field :email, class:"e-regTextInput", placeholder:"Email" %>
-    </p>
+      <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]),{}) %>
+</div><div class="oneField"> 
+    	<a>Телефон</a>
+      <%= ct.text_field :kontakts, placeholder:"+79876543210"%>
+</div><div class="oneField"> 
+    	<a>Почта</a>
+      <%= ct.email_field :email, placeholder:"ivan@yahoo.com" %>
+</div>     
    <% end %>
+</div><!-- class="fieldGroup" -->
 
-<h3 class="e-regSubTitle"> Состав команды </h3>
-	<div class="e-regPar">
+	<div class="registrationRegPar">
+<h3> Состав команды </h3>
+
 		Заполните информацию о составе команды. Контактные данные могут быть использованы для связи с игроками.
 		Контактные данные не будут видны всем посетителям сайта. Если в команде выступают более трех человек, воспользуйтесь кнопкой "добавить игрока".
 	</div>
@@ -58,31 +61,31 @@
 <%q=1%>
 <%@team.teammates.each do |tm|%>
 
-<div class="e-playerInfo" id="<%="player"+q.to_s%>" > 
+<div class="fieldGroup" id="<%="player"+q.to_s%>" > 
 
-<h4 class="e-regSubTitle"> Игрок <%=q%> </h4>
+<h3> Игрок <%=q%> </h3>
 <%q=q+1%> 
   <%= f.fields_for tm, index: tm.id do |ct| %>
-    <p>
-      <%= ct.text_field :name, class:"e-regTextInput", placeholder:"Email" %>
-    </p>
-   <p>
-      <%= ct.text_field :lastname, class:"e-regTextInput", placeholder:"Имя" %>
-    </p>
-   <p>
-      <%= ct.text_field :secondname, class:"e-regTextInput", placeholder:"Отчество" %>
-    </p>
-    <p>
-      <%= ct.text_field :level, class:"e-regTextInput", placeholder:"Рейтинг" %>
-    </p> 
-    <p>
-      <%= ct.email_field :email, class:"e-regTextInput", placeholder:"Email" %>
-    </p>
+	<div class="oneField"><a>Имя</a>   
+      <%= ct.text_field :name, class:"e-regTextInput", placeholder:"Петр" %>
+	</div>
+   	<div class="oneField"><a>Фамилия</a>
+      <%= ct.text_field :lastname, class:"e-regTextInput", placeholder:"Петров" %>
+	</div>
+   	<div class="oneField"><a>Отчество</a>
+      <%= ct.text_field :secondname, class:"e-regTextInput", placeholder:"Петрович" %>
+	</div>   
+	<div class="oneField"><a>Уровень игры</a>
+      <%= ct.text_field :level, class:"e-regTextInput", placeholder:"1 дан" %>
+	</div>   
+	<div class="oneField"><a>e-mail</a>
+      <%= ct.email_field :email, class:"e-regTextInput", placeholder:"petr@yahoo.com" %>
+   </div>
    <% end %>
 </div>
 <%end%>
 
-<a onClick="addPlayer()" > Добавить игрока </a>
+<a onClick="playerAdd()" > Добавить игрока </a>
 <br />
  <p>
     <%= f.submit :value=>'Добавить каманду', :class=>"e-regSubmit"%>
