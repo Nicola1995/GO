@@ -9,7 +9,7 @@ body {
     background-size: cover;
 }
 #menuCont {
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-left: 50px;
 	margin-right: 50px;
 	margin-bottom: 70px;
@@ -20,7 +20,18 @@ body {
 	width: 100%;
 	
 }
+#langSwitcher {
+	height: 30px;
+}
+#langSwitcher a {
+	color: #99F;
+	padding-left: 15px;
+font-size: 18px;
+}
 
+#menu a {
+	width: 20%;
+}
 
 #menu a:link {
 	display: table-cell;

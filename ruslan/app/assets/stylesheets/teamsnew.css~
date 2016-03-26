@@ -29,7 +29,21 @@
 	margin-left: 50px;
 	margin-right: 70px;
 	color: #333;
-	font-size: 20px;
+	font-size: 16px;
+	text-align: justify;
+}
+.registrationRegPar2 {
+	margin-left: 0px;
+	margin-right: 70px;
+	color: #333;
+	font-size: 16px;
+	text-align: justify;
+}
+.registrationTextInput{
+	margin-left: 0px;
+	margin-right: 70px;
+	height: 200px;
+	width: 450px;
 }
 .fieldGroup {
 	margin-left: 50px;
@@ -71,4 +85,17 @@
 .localDelim {
 	height: 16px;
 }
+#registrationAddPlayer {
+	margin-top: 15px;	
+	margin-right: 70px;
+	text-align: right;
+}
+.registrationAddPlayer a{
+	cursor: pointer;
+}
+.registrationAddPlayer a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
 

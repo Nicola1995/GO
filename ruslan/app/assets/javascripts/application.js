@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require registration
+/*
 var playerNum = 0;
 var pId = ["player1","player2", 'player3', 'player4', 'player5', 'player6'];
 
@@ -38,6 +39,17 @@ function slideRefresh() {
 }
 
 setInterval(slideRefresh, 3000);
+*/
+var playerNum;
 
+function onLoad() {
+	playerNum = 3;	
+}
 
+function playerAdd(){
+	if (playerNum >= 6)
+		return;
+	playerNum++;
+	document.getElementById('player' + playerNum.toString()).hidden = false;		
+}
 
