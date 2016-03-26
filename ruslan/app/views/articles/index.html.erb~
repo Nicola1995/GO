@@ -1,14 +1,13 @@
  <div class="e-newsTitle"> НОВОСТИ </div>
        
 
-  <% @articles.reverse.each do |article| %>
-  <hr style = "color:red;">  
-  <div class="e-newsPost">
-      <div  class="e-newsHeader">
-        <div class="e-newsTitle"> <%= article.title %> </div>
-        <div class="e-newsDate"> <%=article.created_at%></div>
+  <% @articles.reverse.each do |article| %> 
+  <div class="newsPostCont">
+      <div  class="newsHeader">
+        <div class="newsTitle"> <%= article.title %> </div>
+        <div class="newsDate"> <%=article.created_at%></div>
       </div>
-<div class="e-newsBody">
+<div class="newsBody">
  <% qw=0 %>   
   <% par =article.text.split("<br>")[0] %>
      <p>

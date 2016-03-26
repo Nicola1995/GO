@@ -1,0 +1,33 @@
+.newsPostCont {
+	width: 600px;
+	margin-bottom: 30px;
+	background-color: #EEE;
+}
+.newsHeader {
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 15px;
+	color: rgba(4, 81, 132, 1);
+	border-bottom: solid 1px rgba(4, 81, 132, 1);
+}
+.newsTitle {
+	
+	font-size: 22px;
+	font-weight: bold;
+}
+.newsBody {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
+}
+.newsBody img {
+	width: 250px;
+}
+.newsReadFull {
+	text-align: right;
+	margin-right: 20px;
+	padding-bottom: 15px;
+}
+.newsReadFull a {
+	color: rgba(4, 81, 132, 1);
+}
