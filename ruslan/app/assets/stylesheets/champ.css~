@@ -1,0 +1,29 @@
+#champCont {
+	float: left;
+	width: 600px;
+	background-color: #FAFAFA;
+}
+.champLink {
+	padding-top: 15px;
+	margin-left: 30px;
+	text-align: right;
+	margin-right: 30px;
+}
+.champLink a {
+	color: rgba(4, 81, 132, 1);
+}
+
+.champLinks {
+	padding-bottom: 25px;
+}
+#champCont h2 {
+	margin-left: 30px;
+	padding-top: 20px;
+	color: rgba(4, 81, 132, 1);
+}
+#champCont p {
+	margin-left: 30px;
+	margin-right: 50px;
+	color: #333;
+}
+

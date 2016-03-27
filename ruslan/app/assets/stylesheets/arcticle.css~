@@ -26,9 +26,8 @@
 .newsReadFull {
 	text-align: right;
 	margin-right: 20px;
-	
+	padding-bottom: 15px;
 }
 .newsReadFull a {
-	margin-bottom: 15px;
 	color: rgba(4, 81, 132, 1);
 }

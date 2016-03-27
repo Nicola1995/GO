@@ -1,0 +1,33 @@
+#showteamsCont {
+	width: 950px;
+	background-color: #FAFAFA;
+}
+#showteamsCont table {
+	padding: 20px;
+}
+
+.showteamsTableHead {
+	color: #FAFAFA;
+	font-size: 18px;
+	background-color: rgba(4, 81, 132, 1);
+
+}
+.showteamsTeamName {
+	width: 250px;
+}
+.showteamsTeamMates {
+	width: 500px;
+}
+.showteamsTeamStatus {
+	width: 150px;
+}
+.showteamsRow1 {
+	height: 30px;
+	font-size: 16px;
+	background-color: #cce5ff;
+}
+.showteamsRow2 {
+	height: 30px;
+	font-size: 16px;
+	background-color: #e6f2ff;
+}

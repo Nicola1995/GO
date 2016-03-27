@@ -1,23 +1,26 @@
-
+<div id="showteamsCont">
 <table class="e-table">
-<tr class="e-tableHead">
-	<td>Название </td>
-	<td>Участники </td>
-	<td> подтверждено </td>
+<tr class="showteamsTableHead">
+	<td class="showteamsTeamName">Название </td>
+	<td class="showteamsTeamMates">Участники </td>
+	<td class="showteamsTeamStatus"> Статус </td>
 	
 		
 </tr>
 <%q = 1%>
  <% @teams.each do |team| %>
 <%q = q%2+1%>
-<tr class=<%="e-tableRow"+q.to_s %> >
+<tr class=<%="showteamsRow"+q.to_s %> >
 	<td> <%=team.name_team%> </td>
 	<td>	
 	<%qw = 0%>	
 	<%team.teammates.each do |tm|%>	
+	  <%if tm.familyName != ""%>
+	  	<% tm.familyName %>
+	  <%end%>
 	  <%if tm.name != ""%>	 
 	    <%=tm.name%> 
-		<%if @teams[qw+1]!=nil and @teams[qw+1]!=""%>, <%end%>
+		<%if @teams[qw+1]!=nil && @teams[qw+1]!=""%>, <%end%>
 	  <%end%>
 	  <%qw=qw+1%>
 	<%end%>
@@ -31,3 +34,4 @@
 </tr>
   <% end %>
 </table>
+</div>
