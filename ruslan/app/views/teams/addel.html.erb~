@@ -1,6 +1,6 @@
 <ol>
 <% @teams.each do |team| %>
-<li><ul>
+<li>Команда<ul>
  	<li> название: <%=team.name_team%> </li>
 	
         <li> сoобщение:  <%=team.message%> </li>
@@ -21,7 +21,7 @@
         Участники
 	<ul>
 	<%team.teammates.each do |tm|%>	
-	<li> [<%=tm.lastname%> <%=tm.secondname%> <%=tm.name%> <%=tm.secondname%>, 
+	<li> [<%=tm.lastname%> <%=tm.name%> <%=tm.secondname%>, 
 	   уровень="<%=tm.level%>", email = <%=tm.email%>] </li>
 	<%end%>
 	</ul>

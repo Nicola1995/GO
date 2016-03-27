@@ -15,8 +15,8 @@
 	<td>	
 	<%qw = 0%>	
 	<%team.teammates.each do |tm|%>	
-	  <%if tm.familyName != ""%>
-	  	<% tm.familyName %>
+	  <%if tm.lastname != ""%>
+	  	<% tm.lastname %>
 	  <%end%>
 	  <%if tm.name != ""%>	 
 	    <%=tm.name%> 
