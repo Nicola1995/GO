@@ -1,0 +1,37 @@
+#welcomeTitle {
+	width: 680px;
+	padding: 5px;
+	float: left;
+}
+#welcomeTitle h1{
+	color: white;
+	font-size: 30px;
+}
+#welcomeCont {
+	width: 250px;
+	float: left;
+	text-align: justify;
+	background-color: #FAFAFA;
+	margin-bottom: 100px;
+}	
+#welcomeSlideWrapper img {
+	width: 250px;
+	height: 182px;
+	margin: 0;
+}
+#welcomeSlideBox {
+	width: 250px;
+	height: 182px;
+	overflow: hidden;
+}
+#welcomeSlideWrapper {
+	width: 9999px;
+	height: 182px;
+	position: relative;
+	transition: left 500ms linear;
+}
+.welcomeText {
+	margin: 10px;
+	color: #333;
+	font-size: 16px;
+}

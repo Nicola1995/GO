@@ -1,12 +1,15 @@
-<h1>Сайт студенческого Го</h1>
+<div>
+<div id="welcomeTitle"><h1>Добро пожаловать на сайт студенческого го. </h1></div>
+<div id="welcomeCont">
+	<div id="welcomeSlideBox">
+	<div id="welcomeSlideWrapper">
+	<img id="slide1" src="../assets/1.jpg" class="e-slide">
+	<img id="slide2" src="../assets/2.jpg" class="e-slide">
+	<img id="slide3" src="../assets/3.jpg" class="e-slide">
+	<img id="slide4" src="../assets/4.jpg" class="e-slide">
+	</div>	</div>
 
-	<div class="e-slideBox">
-	<img id="slide1" src="../assets/1.jpg" class="e-slide" >
-	<img id="slide2" src="../assets/2.jpg" class="e-slide" >
-	<img id="slide3" src="../assets/3.png" class="e-slide" >
-	<img id="slide4" src="../assets/4.jpg" class="e-slide" >
-	</div><!-- e-slideBox-->	
-
-<br /> <br />
-Добро пожаловать на сайт студенческого го. 
+	<div class="welcomeText">
 Го (яп. 碁; также кит. 围棋 вэйци, кор. 바둑 падук) — логическая настольная игра с глубоким стратегическим содержанием, возникшая в Древнем Китае, по разным оценкам, от 2 до 5 тысяч лет назад. До XIX века культивировалась исключительно в Восточной Азии, в XX веке распространилась по всему миру. По общему числу игроков — одна из самых распространённых настольных игр в мире. Входит в число пяти базовых дисциплин Всемирных интеллектуальных игр.
+</div>
+</div></div>

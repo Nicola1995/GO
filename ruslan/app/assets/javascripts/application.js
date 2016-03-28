@@ -40,10 +40,22 @@ function slideRefresh() {
 
 setInterval(slideRefresh, 3000);
 */
-var playerNum;
+var playerNum, scnt = 0;
+
+function onTimer(){
+	var el = document.getElementById('welcomeSlideWrapper');
+	if (!el)
+		return;
+	el.style.left = (-scnt*254).toString() + "px";	
+	//alert((-scnt*250).toString() + "px");
+	scnt = (scnt+1)%4;
+	
+}
 
 function onLoad() {
 	playerNum = 3;	
+	setInterval(onTimer, 3000);
+	onTimer();
 }
 
 function playerAdd(){
