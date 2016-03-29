@@ -1,7 +1,7 @@
 .newsPostCont {
 	width: 600px;
 	margin-bottom: 30px;
-	background-color: #EEE;
+	background-color: #FAFAFA;
 }
 .newsHeader {
 	margin-left: 20px;
@@ -21,7 +21,8 @@
 	text-align: justify;
 }
 .newsBody img {
-	width: 250px;
+	width: 100%;
+
 }
 .newsReadFull {
 	text-align: right;
@@ -30,4 +31,20 @@
 }
 .newsReadFull a {
 	color: rgba(4, 81, 132, 1);
+}
+.arcticleNewsBody {
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-bottom: 50px;
+	color: #333;
+	text-align: justify;
+}
+.arcticleNewsBody img{
+	width: 600px;
+	padding: 30px;
+}
+.arcticleNewsFull {
+	background-color: #FAFAFA;
+	width: 700px;
+	
 }

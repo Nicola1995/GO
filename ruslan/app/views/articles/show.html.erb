@@ -1,16 +1,16 @@
 
-    <div class="e-newsPost">
-      <div  class="e-newsHeader">
-        <div class="e-newsTitle"> <%= @article.title %> </div>
-        <div class="e-newsDate"> <%=@article.created_at%></div>
+    <div class="arcticleNewsFull">
+      <div  class="newsHeader">
+        <div class="newsTitle"> <%= @article.title %> </div>
+        <div class="newsDate"> <%=@article.created_at.strftime("%d.%m.%Y")%></div>
       </div>
-<div class="e-newsBody">
+<div class="arcticleNewsBody">
  <% qw=0 %>   
   <% @article.text.split("<br>").each do |par| %>
      <p>
 	<% par.split("<pic>").each do |m_par| %>
 	  <%= m_par %>
-          <%if @article.pictures[qw]!= nil %>
+          <%if @article.pictures[qw]!= nil  %>
  		<%=  image_tag @article.pictures[qw].image.url(:thumb) %>
 	  <%end%>
 	  <% qw+=1 %>

@@ -5,7 +5,7 @@
   <div class="newsPostCont">
       <div  class="newsHeader">
         <div class="newsTitle"> <%= article.title %> </div>
-        <div class="newsDate"> <%=article.created_at%></div>
+        <div class="newsDate"> <%=article.created_at.strftime("%d.%m.%Y")%></div>
       </div>
 <div class="newsBody">
  <% qw=0 %>   
@@ -13,7 +13,7 @@
      <p>
 	<% par.split("<pic>").each do |m_par| %>
 	  <%= m_par %>
-          <%if article.pictures[qw]!= nil %>
+          <%if article.pictures[qw]!= nil && qw == 0 %>
  		<%=  image_tag article.pictures[qw].image.url(:thumb) %>
 	  <%end%>
 	  <% qw+=1 %>

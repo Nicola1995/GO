@@ -13,14 +13,15 @@
      <p>
 	<% par.split("<pic>").each do |m_par| %>
 	  <%= m_par %>
-          <%if article.pictures[qw]!= nil %>
+          <%if article.pictures[qw]!= nil && qw == 0 %>
  		<%=  image_tag article.pictures[qw].image.url(:thumb) %>
 	  <%end%>
 	  <% qw+=1 %>
         <%end%>
     </p>
-
+	<div class="newsReadFull">
       <%= link_to 'Новость целиком', article_path(article) %>
+	</div>
   </div>
  </div>
   <% end %>
