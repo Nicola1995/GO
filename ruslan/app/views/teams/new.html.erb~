@@ -11,7 +11,7 @@
 
 	<div class="oneField">
     <a>Название команды</a>
-    <%= f.text_field :name_team, placeholder:"Апельсин"  %>
+    <%= f.text_field :name_team, placeholder:"Апельсин", :required => true %>
 	</div>
 
      <div class="registrationRegPar2">
@@ -25,28 +25,28 @@
 <div class="fieldGroup">	
 <h3> Менеджер </h3>
   
-<%= f.fields_for @team.manager do |ct| %>
+<%= f.fields_for @team.manager do |ct|  %>
 	<div class="oneField">
 	<a>Фамилия</a>
-      <%= ct.text_field :familyname, placeholder:"Иванов"%>
+      <%= ct.text_field :familyname, placeholder:"Иванов", :required => true%>
 </div><div class="oneField">  
 	<a>Имя</a>	    
-      <%= ct.text_field :name , placeholder:"Иван" %>
+      <%= ct.text_field :name , placeholder:"Иван", :required => true %>
 	</div><div class="oneField">    	
     	<a>Отчество</a>
-      <%= ct.text_field :secondname, placeholder:"Иванович"%>
+      <%= ct.text_field :secondname, placeholder:"Иванович", :required => true%>
 </div><div class="oneField"> 
     	<a>Университет</a>
-      <%= ct.text_field :univercity, placeholder:"Петрозаводский ГУ"%>
+      <%= ct.text_field :univercity, placeholder:"Петрозаводский ГУ", :required => true%>
 </div><div class="oneField">     
       <%= ct.label :Должность %><br>     
       <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]),{}) %>
 </div><div class="oneField"> 
     	<a>Телефон</a>
-      <%= ct.text_field :kontakts, placeholder:"+79876543210"%>
+      <%= ct.text_field :kontakts, placeholder:"+79876543210", :required => true%>
 </div><div class="oneField"> 
     	<a>Почта</a>
-      <%= ct.email_field :email, placeholder:"ivan@yahoo.com" %>
+      <%= ct.email_field :email, placeholder:"ivan@yahoo.com", :required => true %>
 </div>     
    <% end %>
 </div><!-- class="fieldGroup" -->
@@ -63,9 +63,9 @@
 <%@team.teammates.each do |tm|%>
 
 <% if q <= 3 %>
- <div class="fieldGroup" id="<%="player"+q.to_s%>" > 
+ <div class="fieldGroup teammateGroup" id="<%="player"+q.to_s%>" > 
 <% else %>
- <div class="fieldGroup" id="<%="player"+q.to_s%>" hidden="true"> 
+ <div class="fieldGroup teammateGroup" id="<%="player"+q.to_s%>" hidden="true"> 
 <% end %>
 
 <h3> Игрок <%=q%> </h3>
@@ -89,11 +89,13 @@
    <% end %>
 </div>
 <%end%>
-<div id="registrationAddPlayer">
+<div class="registrationAddPlayer">
 <a onClick="playerAdd()"  > Добавить игрока </a>
 </div>
-<br />
- <p>
+<div class="registrationAddPlayer">
+<a onClick="playerRem()" style="color:#AA0000" > Убрать игрока </a>
+</div>
+<div class="registrationAddPlayer">
     <%= f.submit :value=>'Добавить каманду', :class=>"e-regSubmit"%>
-  </p>
+</div>
 <%end%>
