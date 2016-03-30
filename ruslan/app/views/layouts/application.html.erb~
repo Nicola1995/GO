@@ -14,7 +14,10 @@
 <body onload="onLoad()">
    	<div id="site">
 	<div id="menuCont">
-	
+	<div id="langSwitcher">
+	<%= link_to 'русский', welcome_rus_path %>
+	<%= link_to 'english', welcome_eng_path %>		
+	</div>
 	<div id="menu">
 		<%= link_to 'Главная', welcome_index_path, class:"e-menuA" %>
 		<%= link_to 'Новости', articles_path, class:"e-menuA" %>
@@ -22,12 +25,11 @@
       	<a href = "#"> Обучение</a>
         <%= link_to 'Контакты', contakts_path, class:"e-menuA"  %>		
 	</div><!-- menu -->
-	<div id="langSwitcher">
-	<%= link_to 'русский', welcome_rus_path %>
-	<%= link_to 'english', welcome_eng_path %>		
-	</div>
 	</div><!-- menuCont -->
 	<%= yield %>
+	<div class="ytVideos">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/y4PQASICTIs" frameborder="0" allowfullscreen></iframe>	
+	</div>
 	</div><!-- site -->
 
 </body>

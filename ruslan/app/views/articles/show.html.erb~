@@ -2,7 +2,7 @@
     <div class="arcticleNewsFull">
       <div  class="newsHeader">
         <div class="newsTitle"> <%= @article.title %> </div>
-        <div class="newsDate"> <%=@article.created_at%></div>
+        <div class="newsDate"> <%=@article.created_at.strftime("%d.%m.%Y")%></div>
       </div>
 <div class="arcticleNewsBody">
  <% qw=0 %>   
@@ -19,5 +19,10 @@
 <%end%>
    </div>
  </div>
+<div class="newsVideos">
+<iframe width="250"  src="https://www.youtube.com/embed/y4PQASICTIs" frameborder="0" allowfullscreen></iframe>
+<br>
+<iframe width="250" src="https://www.youtube.com/embed/SjVID2ZOIuE" frameborder="0" allowfullscreen></iframe>
+</div>
  
 

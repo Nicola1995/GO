@@ -40,11 +40,20 @@
 	text-align: justify;
 }
 .arcticleNewsBody img{
-	width: 600px;
+	width: 440px;
 	padding: 30px;
 }
 .arcticleNewsFull {
 	background-color: #FAFAFA;
-	width: 700px;
+	width: 600px;
+	float: left;
+}
+.newsFullPageContent{
+	float: left;
+}
+.newsVideos {
+	padding: 30px;
+	margin-left: 650px;
+	width: 250px;
 	
 }
