@@ -1,9 +1,24 @@
+<%if session[:lang] == 0
+		@name = "Название команды";
+		@teammates = "Участники";
+		@status = "Статус";
+		@accepted = "Подтверждено";
+		@in_onserving = "Ещё не подтверждено";
+	
+	else
+		@name = "Name of the team";
+		@teammates = "Teammates";
+		@status = "Status";
+		@accepted = "Accepted";	
+		@in_onserving = "In observing";
+	end;%>
+
 <div id="showteamsCont">
 <table class="e-table">
 <tr class="showteamsTableHead">
-	<td class="showteamsTeamName">Название </td>
-	<td class="showteamsTeamMates">Участники </td>
-	<td class="showteamsTeamStatus"> Статус </td>
+	<td class="showteamsTeamName"> <%=@name%> </td>
+	<td class="showteamsTeamMates"> <%=@teammates%> </td>
+	<td class="showteamsTeamStatus"> <%=@status%> </td>
 	
 		
 </tr>
@@ -16,7 +31,7 @@
 	<%qw = 0%>	
 	<%team.teammates.each do |tm|%>	
 	  <%if tm.lastname != ""%>
-	  	<% tm.lastname %>
+	  	<%=tm.lastname %>
 	  <%end%>
 	  <%if tm.name != ""%>	 
 	    <%=tm.name%> 
@@ -26,9 +41,9 @@
 	<%end%>
 	</td>
 	<td> <%if team.check%> 
-		<im style = "color:green;">Подтверждено </im> 
+		<im style = "color:green;"><%=@accepted%> </im> 
 	     <%else%> 
-		<im style = "color:red;">Не подтверждено </im>
+		<im style = "color:red;"> <%=@in_onserving%> </im>
 	     <%end%> 
 	</td>
 </tr>

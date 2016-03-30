@@ -1,5 +1,14 @@
+<%if session[:lang] == 0
+		@welcome = "Добро пожаловать на сайт студенческого го.";
+		@text = 'Го (яп. 碁; также кит. 围棋 вэйци, кор. 바둑 падук) — логическая настольная игра с глубоким стратегическим содержанием, возникшая в Древнем Китае, по разным оценкам, от 2 до 5 тысяч лет назад. До XIX века культивировалась исключительно в Восточной Азии, в XX веке распространилась по всему миру. По общему числу игроков — одна из самых распространённых настольных игр в мире. Входит в число пяти базовых дисциплин Всемирных интеллектуальных игр.';
+	else
+		@welcome = "Welcome to our site dedicated to Go.";	
+		@text = 'Go (traditional Chinese: 圍棋; simplified Chinese: 围棋; pinyin: About this sound wéiqí; Japanese: 囲碁; rōmaji: igo; Korean: 바둑; romaja: baduk; literally: "encircling game") is an abstract strategy board game for two players, in which the aim is to surround more territory than the opponent.
+The game originated in ancient China more than 2,500 years ago, and is one of the oldest board games played today. It was considered one of the four essential arts of a cultured Chinese scholar in antiquity. The earliest written reference to the game is generally recognized as the historical annal Zuo Zhuan (c. 4th century BC). The current game of Go as we know was formalized in Japan in the 15th century CE.';
+	end;%>
+
 <div>
-<div id="welcomeTitle"><h1>Добро пожаловать на сайт студенческого го. </h1></div>
+<div id="welcomeTitle"><h1><%=@welcome%></h1></div>
 <div id="welcomeCont">
 	<div id="welcomeSlideBox">
 	<div id="welcomeSlideWrapper">
@@ -10,6 +19,6 @@
 	</div>	</div>
 
 	<div class="welcomeText">
-Го (яп. 碁; также кит. 围棋 вэйци, кор. 바둑 падук) — логическая настольная игра с глубоким стратегическим содержанием, возникшая в Древнем Китае, по разным оценкам, от 2 до 5 тысяч лет назад. До XIX века культивировалась исключительно в Восточной Азии, в XX веке распространилась по всему миру. По общему числу игроков — одна из самых распространённых настольных игр в мире. Входит в число пяти базовых дисциплин Всемирных интеллектуальных игр.
+<%=@text%>
 </div>
 </div></div>

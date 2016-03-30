@@ -14,18 +14,32 @@
 <body onload="onLoad()">
    	<div id="site">
 	<div id="menuCont">
-	
-	<div id="menu">
-		<%= link_to 'Главная', welcome_index_path, class:"e-menuA" %>
-		<%= link_to 'Новости', articles_path, class:"e-menuA" %>
-        <%= link_to 'Чемпионат', champs_path, class:"e-menuA"  %>
-      	<a href = "#"> Обучение</a>
-        <%= link_to 'Контакты', contakts_path, class:"e-menuA"  %>		
-	</div><!-- menu -->
 	<div id="langSwitcher">
 	<%= link_to 'русский', welcome_rus_path %>
 	<%= link_to 'english', welcome_eng_path %>		
 	</div>
+	<div id="menu">
+<%if session[:lang] == 0
+		@main = "Главная";
+		@news = "Новости";
+		@champ = "Чемпионат Европы по Го";
+		@stud = "Обучение";
+		@cont = "Контакты";
+	
+	else
+		@main = "Main Page";
+		@news = "News";
+		@champ = "Go European Championship";
+		@stud = "Onlain Studying";	
+		@cont = "Contacts";
+	end;%>
+
+		<%= link_to @main, welcome_index_path, class:"e-menuA" %>
+		<%= link_to @news, articles_path, class:"e-menuA" %>
+        <%= link_to @champ, champs_path, class:"e-menuA"  %>
+      	<a href = "#"> Обучение</a>
+        <%= link_to @cont, contakts_path, class:"e-menuA"  %>		
+	</div><!-- menu -->
 	</div><!-- menuCont -->
 	<%= yield %>
 	</div><!-- site -->

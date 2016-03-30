@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+		
   end
   def rus
   	session[:lang] = 0;

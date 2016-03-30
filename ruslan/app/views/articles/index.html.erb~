@@ -19,8 +19,9 @@
 	  <% qw+=1 %>
         <%end%>
     </p>
-
+	<div class="newsReadFull">
       <%= link_to 'Новость целиком', article_path(article) %>
+	</div>
   </div>
  </div>
   <% end %>

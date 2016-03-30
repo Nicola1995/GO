@@ -1,6 +1,21 @@
 
 
 <%= form_for @team, {url: {action: "create"}, :html => {:id => 'registrationForm'} } do |f| %>
+        <div>
+<% if @team.errors.any? %>
+    <div>
+      <h2>
+        <%= pluralize(@team.errors.count, "error") %> prohibited
+        this team from being saved:
+      </h2>
+      <ul>
+        <% @team.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
 	<h2> Регистрация команды </h2>
 	<div class="registrationRegPar">
 		Как бы не утомляла Вас эта формочка, просим ее заполнить. Это нужно для организации чемпионата. 
@@ -11,7 +26,7 @@
 
 	<div class="oneField">
     <a>Название команды</a>
-    <%= f.text_field :name_team, placeholder:"Апельсин"  %>
+    <%= f.text_field :name_team, placeholder:"Апельсин",:required => true  %>
 	</div>
 
      <div class="registrationRegPar2">
@@ -28,13 +43,13 @@
 <%= f.fields_for @team.manager do |ct| %>
 	<div class="oneField">
 	<a>Фамилия</a>
-      <%= ct.text_field :familyname, placeholder:"Иванов"%>
+      <%= ct.text_field :familyname, placeholder:"Иванов",:required => true%>
 </div><div class="oneField">  
 	<a>Имя</a>	    
-      <%= ct.text_field :name , placeholder:"Иван" %>
+      <%= ct.text_field :name , placeholder:"Иван",:required => true %>
 	</div><div class="oneField">    	
     	<a>Отчество</a>
-      <%= ct.text_field :secondname, placeholder:"Иванович"%>
+      <%= ct.text_field :secondname, placeholder:"Иванович",:required => true%>
 </div><div class="oneField"> 
     	<a>Университет</a>
       <%= ct.text_field :univercity, placeholder:"Петрозаводский ГУ"%>
@@ -43,10 +58,10 @@
       <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]),{}) %>
 </div><div class="oneField"> 
     	<a>Телефон</a>
-      <%= ct.text_field :kontakts, placeholder:"+79876543210"%>
+      <%= ct.text_field :kontakts, placeholder:"+79876543210",:required => true%>
 </div><div class="oneField"> 
     	<a>Почта</a>
-      <%= ct.email_field :email, placeholder:"ivan@yahoo.com" %>
+      <%= ct.email_field :email, placeholder:"ivan@yahoo.com",:required => true %>
 </div>     
    <% end %>
 </div><!-- class="fieldGroup" -->

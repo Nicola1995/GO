@@ -3,4 +3,5 @@ class Team < ActiveRecord::Base
 	has_one :manager, :dependent => :destroy
 	accepts_nested_attributes_for :teammates
 	accepts_nested_attributes_for :manager
+	validates :name_team, presence: true
 end

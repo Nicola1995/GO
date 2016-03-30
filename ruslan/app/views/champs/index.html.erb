@@ -1,14 +1,30 @@
+<%if session[:lang] == 0
+		@main = "Студенческий чемпионат Европы по го";
+		@news = "На нашем сайте Вы можете зарегистрироваться на чемпионат, а также посмотреть список команд, которые будут в нем участвовать.";
+		@champ = "Зарегистрировать команду";
+		@stud = "Просмотр всех зарегистрованных команд";
+		@cont = "положение о емпонате";
+	
+	else
+		@main = "Student go champ of Europe";
+		@news = "On our site you can register on the Europe champ and also see comand, thar have already been registrated.";
+		@champ = "Register command";
+		@stud = "see all commands";	
+		@cont = "info about champ";
+	end;%>
+
+
+
 <div id="champCont">
-<h2>Студенческий чемпионат Европы по го</h2>
-<p>
-На нашем сайте Вы можете зарегистрироваться на чемпионат, а также посмотреть список команд, которые будут в нем участвовать.
-</p>
+<h2><%=@main%></h2>
+<p><%=@news%></p>
+<p><%=@cont%></p>
 <div class="champLinks">
 <div class="champLink">
-<%= link_to 'Регистрация команды', new_team_path %>
+<%= link_to @champ, new_team_path %>
 <div class="champLink">
 </div>
-<%= link_to 'Просмотр всех зарегистрованных команд', teams_path %>
+<%= link_to @stud, teams_path %>
 </div>
 </div>
 </div>
