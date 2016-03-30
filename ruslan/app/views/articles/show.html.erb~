@@ -2,7 +2,7 @@
     <div class="e-newsPost">
       <div  class="e-newsHeader">
         <div class="e-newsTitle"> <%= @article.title %> </div>
-        <div class="e-newsDate"> <%=@article.created_at%></div>
+        <div class="e-newsDate"> <%=@article.created_at.strftime("%d.%m.%Y")%></div>
       </div>
 <div class="e-newsBody">
  <% qw=0 %>   

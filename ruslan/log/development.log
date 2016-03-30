@@ -2641,3 +2641,535 @@ Processing by TeamsController#index as HTML
   [1m[35mTeammate Load (0.7ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 47]]
   Rendered teams/index.html.erb within layouts/application (55.5ms)
 Completed 200 OK in 399ms (Views: 389.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:06:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 1780ms (Views: 1711.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/champs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/contakts.self-7ad9f6abe5131ec109c4d76541a21e9bd795932512dffdb596dbc0eea8855e5c.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/champ.self-b44a568d8fcd27f0e537d288fd35ff6e9aae6ad651aa0fc5aa2036eeb854fe8f.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/arcticle.self-97a5bb77b4e44b56263dacbdb973e95de31b059e53ddc5427d9f9fe8103fb87b.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/managers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/menu.self-c4d4ed9aa96b89ae3c21b065614d4a415e117663517470ac268407622db90237.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/nicola.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/application.self-c4991312985bccd133f1f21ab2f6a5d0129a8416a91037313b14f05d7d2e7dde.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/contakts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:14 +0300
+
+
+Started GET "/assets/registration.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/showteams.self-0384f794ae4e3333151e2c298eb29380bc64f59ab9374d10539a2aa59399e7d5.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/rus.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/teammates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/team.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/teamsnew.self-3f7ad961645a50271cebbbbdac7c34ad00fa88c4d6f93f831ed90eb0af2a1e8b.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/champs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/welcome.self-204fb338b7c54275e483e2bbcc226df591e63b841bb5217c1a52c3e131c3d20e.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/application.self-74d4a43b3e1a12bc322698a4f23e4b396bd1731d9084be2538f46395132680dd.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/teammates.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/team.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:06:15 +0300
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2016-03-31 00:06:16 +0300
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:06:23 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 354ms (Views: 351.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2016-03-31 00:06:25 +0300
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (134.4ms)
+Completed 200 OK in 644ms (Views: 412.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:12:14 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 552ms (Views: 549.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:12:15 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 282ms (Views: 279.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-7a34fe30556d9fb3b1703d7a77a81fec7ea530553f9a14fbae23a9623314b45e.js?body=1" for 127.0.0.1 at 2016-03-31 00:12:15 +0300
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2016-03-31 00:12:16 +0300
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2016-03-31 00:12:17 +0300
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 350ms (Views: 335.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 127.0.0.1 at 2016-03-31 00:14:27 +0300
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FCWE2Hz4L1gerYOzdo1sVt/QXNR5b6/tVE4fiK7lHl3k85OkuB+Y5tXYI7SM4pW20pWNFJzIjddM/vTmfLKiKw==", "team"=>{"name_team"=>"sdfsdf", "message"=>"asd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sd", "manager"=>{"familyname"=>"asd@sd", "name"=>"asd@sd", "secondname"=>"asd@sd", "univercity"=>"asd@sd", "position"=>"ректор", "kontakts"=>"asd@sd", "email"=>"asd@sd"}, "teammate"=>[{"lastname"=>"asd@sd", "name"=>"asd@sd", "secondname"=>"asd@sd", "level"=>"asd@sd", "email"=>"asd@sd"}, {"lastname"=>"asd@sd", "name"=>"asd@sd", "secondname"=>"asd@sd", "level"=>"asd@sd", "email"=>"asd@sd"}, {"lastname"=>"asd@sd", "name"=>"asd@sd", "secondname"=>"asd@sd", "level"=>"asd@sd", "email"=>"asd@sd"}, {"lastname"=>"eqwf", "name"=>"qwef", "secondname"=>"qwef", "level"=>"qwef", "email"=>"asd@sd"}, {"lastname"=>"", "name"=>"", "secondname"=>"", "level"=>"", "email"=>""}, {"lastname"=>"", "name"=>"", "secondname"=>"", "level"=>"", "email"=>""}]}, "commit"=>"Добавить каманду"}
+Unpermitted parameters: manager, teammate
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "teams" ("name_team", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name_team", "sdfsdf"], ["message", "asd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sdasd@sd"], ["created_at", "2016-03-30 21:14:27.250201"], ["updated_at", "2016-03-30 21:14:27.250201"]]
+  [1m[35m (173.6ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "managers" ("name", "secondname", "familyname", "univercity", "kontakts", "position", "email", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "asd@sd"], ["secondname", "asd@sd"], ["familyname", "asd@sd"], ["univercity", "asd@sd"], ["kontakts", "asd@sd"], ["position", "ректор"], ["email", "asd@sd"], ["team_id", 48], ["created_at", "2016-03-30 21:14:27.453796"], ["updated_at", "2016-03-30 21:14:27.453796"]]
+  [1m[36m (146.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mManager Load (0.8ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."team_id" = ? LIMIT 1  [["team_id", 48]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "teammates" ("name", "secondname", "lastname", "level", "email", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "asd@sd"], ["secondname", "asd@sd"], ["lastname", "asd@sd"], ["level", "asd@sd"], ["email", "asd@sd"], ["team_id", 48], ["created_at", "2016-03-30 21:14:27.628956"], ["updated_at", "2016-03-30 21:14:27.628956"]]
+  [1m[36m (106.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "teammates" ("name", "secondname", "lastname", "level", "email", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "asd@sd"], ["secondname", "asd@sd"], ["lastname", "asd@sd"], ["level", "asd@sd"], ["email", "asd@sd"], ["team_id", 48], ["created_at", "2016-03-30 21:14:27.750165"], ["updated_at", "2016-03-30 21:14:27.750165"]]
+  [1m[35m (85.6ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "teammates" ("name", "secondname", "lastname", "level", "email", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "asd@sd"], ["secondname", "asd@sd"], ["lastname", "asd@sd"], ["level", "asd@sd"], ["email", "asd@sd"], ["team_id", 48], ["created_at", "2016-03-30 21:14:27.851520"], ["updated_at", "2016-03-30 21:14:27.851520"]]
+  [1m[36m (109.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "teammates" ("name", "secondname", "lastname", "level", "email", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "qwef"], ["secondname", "qwef"], ["lastname", "eqwf"], ["level", "qwef"], ["email", "asd@sd"], ["team_id", 48], ["created_at", "2016-03-30 21:14:27.973648"], ["updated_at", "2016-03-30 21:14:27.973648"]]
+  [1m[35m (134.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/champs
+Completed 302 Found in 875ms (ActiveRecord: 765.3ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:14:28 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 328ms (Views: 326.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2016-03-31 00:14:29 +0300
+
+
+Started GET "/teams" for 127.0.0.1 at 2016-03-31 00:14:31 +0300
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (1.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mTeammate Load (1.0ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 35]]
+  [1m[36mTeammate Load (0.4ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 36]]
+  [1m[35mTeammate Load (0.4ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 37]]
+  [1m[36mTeammate Load (0.4ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 39]]
+  [1m[35mTeammate Load (0.3ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 40]]
+  [1m[36mTeammate Load (0.4ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 41]]
+  [1m[35mTeammate Load (0.5ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 42]]
+  [1m[36mTeammate Load (0.3ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 43]]
+  [1m[35mTeammate Load (0.5ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 44]]
+  [1m[36mTeammate Load (0.4ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 45]]
+  [1m[35mTeammate Load (0.3ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 46]]
+  [1m[36mTeammate Load (0.8ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 47]]
+  [1m[35mTeammate Load (0.5ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 48]]
+  Rendered teams/index.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 374ms (Views: 363.9ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/contakts" for 127.0.0.1 at 2016-03-31 00:15:42 +0300
+Processing by ContaktsController#index as HTML
+  Rendered contakts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 331ms (Views: 329.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:15:48 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 283ms (Views: 281.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2016-03-31 00:15:52 +0300
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (1.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mTeammate Load (0.4ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 35]]
+  [1m[36mTeammate Load (0.3ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 36]]
+  [1m[35mTeammate Load (0.4ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 37]]
+  [1m[36mTeammate Load (0.3ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 39]]
+  [1m[35mTeammate Load (0.5ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 40]]
+  [1m[36mTeammate Load (0.3ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 41]]
+  [1m[35mTeammate Load (0.3ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 42]]
+  [1m[36mTeammate Load (0.3ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 43]]
+  [1m[35mTeammate Load (0.3ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 44]]
+  [1m[36mTeammate Load (0.5ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 45]]
+  [1m[35mTeammate Load (0.4ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 46]]
+  [1m[36mTeammate Load (1.0ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 47]]
+  [1m[35mTeammate Load (0.7ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 48]]
+  Rendered teams/index.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 384ms (Views: 373.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/welcome/rus" for 127.0.0.1 at 2016-03-31 00:15:56 +0300
+Processing by WelcomeController#rus as HTML
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-31 00:15:56 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 312ms (Views: 310.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/1.jpg" for 127.0.0.1 at 2016-03-31 00:15:56 +0300
+
+
+Started GET "/assets/2.jpg" for 127.0.0.1 at 2016-03-31 00:15:56 +0300
+
+
+Started GET "/assets/4.jpg" for 127.0.0.1 at 2016-03-31 00:15:56 +0300
+
+
+Started GET "/assets/3.jpg" for 127.0.0.1 at 2016-03-31 00:15:56 +0300
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:15:57 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 296ms (Views: 294.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2016-03-31 00:15:59 +0300
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (2.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mTeammate Load (0.6ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 35]]
+  [1m[36mTeammate Load (0.4ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 36]]
+  [1m[35mTeammate Load (0.5ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 37]]
+  [1m[36mTeammate Load (0.5ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 39]]
+  [1m[35mTeammate Load (0.3ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 40]]
+  [1m[36mTeammate Load (0.5ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 41]]
+  [1m[35mTeammate Load (0.5ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 42]]
+  [1m[36mTeammate Load (0.4ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 43]]
+  [1m[35mTeammate Load (1.9ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 44]]
+  [1m[36mTeammate Load (0.4ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 45]]
+  [1m[35mTeammate Load (0.5ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 46]]
+  [1m[36mTeammate Load (1.0ms)[0m  [1mSELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?[0m  [["team_id", 47]]
+  [1m[35mTeammate Load (1.1ms)[0m  SELECT "teammates".* FROM "teammates" WHERE "teammates"."team_id" = ?  [["team_id", 48]]
+  Rendered teams/index.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 379ms (Views: 365.4ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/welcome/eng" for 127.0.0.1 at 2016-03-31 00:16:31 +0300
+Processing by WelcomeController#eng as HTML
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-31 00:16:31 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 325ms (Views: 323.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:17:10 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 296ms (Views: 292.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2016-03-31 00:17:12 +0300
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 358ms (Views: 331.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contakts" for 127.0.0.1 at 2016-03-31 00:19:53 +0300
+Processing by ContaktsController#index as HTML
+  Rendered contakts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 330ms (Views: 326.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:44:26 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 291ms (Views: 289.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2016-03-31 00:44:28 +0300
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 396ms (Views: 373.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/rus" for 127.0.0.1 at 2016-03-31 00:44:39 +0300
+Processing by WelcomeController#rus as HTML
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-31 00:44:39 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 269ms (Views: 267.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:44:41 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 332ms (Views: 328.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2016-03-31 00:44:44 +0300
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 337ms (Views: 322.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-03-31 00:46:36 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mPicture Load (1.0ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 6]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 5]]
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 3]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 2]]
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (186.8ms)
+Completed 200 OK in 496ms (Views: 472.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-03-31 00:53:50 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 6]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 5]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 3]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 2]]
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 373ms (Views: 366.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/champs" for 127.0.0.1 at 2016-03-31 00:53:57 +0300
+Processing by ChampsController#index as HTML
+  Rendered champs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 311ms (Views: 307.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-03-31 00:53:58 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 6]]
+  [1m[36mPicture Load (0.7ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 5]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 3]]
+  [1m[36mPicture Load (0.7ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 2]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 425ms (Views: 418.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-03-31 00:56:57 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 6]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 5]]
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 3]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 2]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 543ms (Views: 536.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/arcticle.self-7a5a3b4dbe1d4d6644b935f22e67d69ff233074183be75ec31689a2cdee02b36.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:58 +0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/champ.self-b44a568d8fcd27f0e537d288fd35ff6e9aae6ad651aa0fc5aa2036eeb854fe8f.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/champs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/menu.self-c4d4ed9aa96b89ae3c21b065614d4a415e117663517470ac268407622db90237.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/managers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/nicola.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/contakts.self-7ad9f6abe5131ec109c4d76541a21e9bd795932512dffdb596dbc0eea8855e5c.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/rus.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/showteams.self-0384f794ae4e3333151e2c298eb29380bc64f59ab9374d10539a2aa59399e7d5.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/team.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/teammates.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/teamsnew.self-3f7ad961645a50271cebbbbdac7c34ad00fa88c4d6f93f831ed90eb0af2a1e8b.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/welcome.self-204fb338b7c54275e483e2bbcc226df591e63b841bb5217c1a52c3e131c3d20e.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/application.self-c4991312985bccd133f1f21ab2f6a5d0129a8416a91037313b14f05d7d2e7dde.css?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:56:59 +0300
+
+
+Started GET "/assets/champs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/contakts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/registration.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/team.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/teammates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/application.self-7a34fe30556d9fb3b1703d7a77a81fec7ea530553f9a14fbae23a9623314b45e.js?body=1" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2016-03-31 00:57:00 +0300
+
+
+Started GET "/contakts" for 127.0.0.1 at 2016-03-31 00:57:42 +0300
+Processing by ContaktsController#index as HTML
+  Rendered contakts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 286ms (Views: 283.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-03-31 00:59:54 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 6]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 5]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 3]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?[0m  [["article_id", 2]]
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 376ms (Views: 369.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2016-03-31 01:00:01 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."article_id" = ?  [["article_id", 6]]
+  Rendered articles/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 339ms (Views: 322.7ms | ActiveRecord: 1.0ms)

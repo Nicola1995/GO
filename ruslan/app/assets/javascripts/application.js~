@@ -46,7 +46,7 @@ function onTimer(){
 	var el = document.getElementById('welcomeSlideWrapper');
 	if (!el)
 		return;
-	el.style.left = (-scnt*253).toString() + "px";	
+	el.style.left = (-scnt*254).toString() + "px";	
 	//alert((-scnt*250).toString() + "px");
 	scnt = (scnt+1)%4;
 	

@@ -1,36 +1,37 @@
+<%if session[:lang] == 0
+		@reg = "Регистрация команды";
+		@text_form = "Как бы не утомляла Вас эта формочка, просим ее заполнить. Это нужно для организации чемпионата. Много полей? Ну а кому сейчас легко.";
+		@info_team = "Общая информация о команде";
+		@name_team = "Название команды";
+		@text_message = "Вы можете оставить некоторое сообщение для нас. Например о скидках для проживания.";
+		@manager = "Менеджер"
+
+	else
+		@reg = "Team registration";
+		@text_form = "It would not bother you to fill this form . It is necessary for the organization of the championship. Many fields? And who is now easy.";
+		@info_team = "General information";
+		@name_team = "Name of your team";	
+		@text_message = "You can also leave a message for us. For example, about hotels, and so on.";
+		@manager = "Manager"
+		
+	end;%>
 
 
 <%= form_for @team, {url: {action: "create"}, :html => {:id => 'registrationForm'} } do |f| %>
-        <div>
-<% if @team.errors.any? %>
-    <div>
-      <h2>
-        <%= pluralize(@team.errors.count, "error") %> prohibited
-        this team from being saved:
-      </h2>
-      <ul>
-        <% @team.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-</div>
-	<h2> Регистрация команды </h2>
+	<h2> <%=@reg%> </h2>
 	<div class="registrationRegPar">
-		Как бы не утомляла Вас эта формочка, просим ее заполнить. Это нужно для организации чемпионата. 
-		Много полей? Ну а кому сейчас легко.
+		<%=@text_form%>
 	</div>
 	<div class="fieldGroup">	
-	<h3> Общая информация о команде </h3>	
+	<h3> <%=@info_team%> </h3>	
 
 	<div class="oneField">
-    <a>Название команды</a>
-    <%= f.text_field :name_team, placeholder:"Апельсин",:required => true  %>
+    <a><%=@name_team%></a>
+    <%= f.text_field :name_team, placeholder:"Апельсин", :required => true %>
 	</div>
 
      <div class="registrationRegPar2">
-		Вы можете оставить некоторое сообщение для нас. Например о скидках для проживания.
+		<%=@text_message%>
 	</div>
 
    
@@ -38,30 +39,30 @@
 	</div>
 	
 <div class="fieldGroup">	
-<h3> Менеджер </h3>
+<h3> <%=@manager%> </h3>
   
-<%= f.fields_for @team.manager do |ct| %>
+<%= f.fields_for @team.manager do |ct|  %>
 	<div class="oneField">
 	<a>Фамилия</a>
-      <%= ct.text_field :familyname, placeholder:"Иванов",:required => true%>
+      <%= ct.text_field :familyname, placeholder:"Иванов", :required => true%>
 </div><div class="oneField">  
 	<a>Имя</a>	    
-      <%= ct.text_field :name , placeholder:"Иван",:required => true %>
+      <%= ct.text_field :name , placeholder:"Иван", :required => true %>
 	</div><div class="oneField">    	
     	<a>Отчество</a>
-      <%= ct.text_field :secondname, placeholder:"Иванович",:required => true%>
+      <%= ct.text_field :secondname, placeholder:"Иванович", :required => true%>
 </div><div class="oneField"> 
     	<a>Университет</a>
-      <%= ct.text_field :univercity, placeholder:"Петрозаводский ГУ"%>
+      <%= ct.text_field :univercity, placeholder:"Петрозаводский ГУ", :required => true%>
 </div><div class="oneField">     
       <%= ct.label :Должность %><br>     
       <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]),{}) %>
 </div><div class="oneField"> 
     	<a>Телефон</a>
-      <%= ct.text_field :kontakts, placeholder:"+79876543210",:required => true%>
+      <%= ct.text_field :kontakts, placeholder:"+79876543210", :required => true%>
 </div><div class="oneField"> 
     	<a>Почта</a>
-      <%= ct.email_field :email, placeholder:"ivan@yahoo.com",:required => true %>
+      <%= ct.email_field :email, placeholder:"ivan@yahoo.com", :required => true %>
 </div>     
    <% end %>
 </div><!-- class="fieldGroup" -->
@@ -78,9 +79,9 @@
 <%@team.teammates.each do |tm|%>
 
 <% if q <= 3 %>
- <div class="fieldGroup" id="<%="player"+q.to_s%>" > 
+ <div class="fieldGroup teammateGroup" id="<%="player"+q.to_s%>" > 
 <% else %>
- <div class="fieldGroup" id="<%="player"+q.to_s%>" hidden="true"> 
+ <div class="fieldGroup teammateGroup" id="<%="player"+q.to_s%>" hidden="true"> 
 <% end %>
 
 <h3> Игрок <%=q%> </h3>
@@ -105,9 +106,14 @@
 </div>
 <%end%>
 <div class="registrationAddPlayer">
-<a onClick="playerAdd()"  > Добавить игрока </a>
+<a onClick="playerAdd()" style="color:#0000AA" > Добавить игрока </a>
+</div>
+<div class="registrationAddPlayer">
+<a onClick="playerRem()" style="color:#AA0000" > Убрать игрока </a>
 </div>
 <div class="registrationAddPlayer">
     <%= f.submit :value=>'Добавить каманду', :class=>"e-regSubmit"%>
 </div>
 <%end%>
+
+

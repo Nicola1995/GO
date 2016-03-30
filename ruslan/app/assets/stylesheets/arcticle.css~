@@ -1,7 +1,7 @@
 .newsPostCont {
 	width: 600px;
 	margin-bottom: 30px;
-	background-color: #EEE;
+	background-color: #FAFAFA;
 }
 .newsHeader {
 	margin-left: 20px;
