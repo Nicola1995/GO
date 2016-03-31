@@ -1,4 +1,6 @@
 class TeamsController < ApplicationController
+	http_basic_authenticate_with name: "lazarev", password: "1234567", :only => [:addel, :edit, :destroy, :create, :update]
+
 	def index
 		@teams = Team.all
 	end
@@ -59,7 +61,7 @@ class TeamsController < ApplicationController
 	     
 	   params[:team][:teammate].each{|teammate|
            if teammate[:name] != "" 
-@team.teammates.create(name: teammate[:name],secondname: teammate[:secondname],lastname: teammate[:lastname], level: teammate[:level],email: teammate[:email])	
+@team.teammates.create(name: teammate[:name],secondname: teammate[:secondname],lastname: teammate[:lastname], level: teammate[:level],email: teammate[:email],kontakts: teammate[:kontakts])	
 	    end;
 	   }
 

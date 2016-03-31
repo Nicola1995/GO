@@ -5,7 +5,27 @@
 		@name_team = "Название команды";
 		@text_message = "Вы можете оставить некоторое сообщение для нас. Например о скидках для проживания.";
 		@manager = "Менеджер"
-
+		@apelsin = "Апельсин"
+		@add_teammate = "Добавить игрока"
+		@del_teame  = "Убрать игрока";
+		@add_team = 'Зарегистриировать команду'
+		@name1 = "имя";
+		@name2 = "фамилия";
+		@name3 = "отчество";
+		@text_before_teammates = "Заполните информацию о составе команды. Контактные данные могут быть использованы для связи с игроками.
+		Контактные данные не будут видны всем посетителям сайта. Если в команде выступают более трех человек, воспользуйтесь кнопкой 'добавить игрока'."
+		@sostav = "Состав команды "; 
+		@level = "Уровень игры";
+		@universityName = "Университет"
+		@job = "Должность"
+		@wordPlayer = "Игрок "
+		@Ivan = "Иван"
+		@Ivanov = "Иванов"
+		@Ivanovich = "Иванович"
+		@universityExample = "University of Cambridge"
+		@rector = 'ректор'
+		@prepodavatel = "преподаватель"
+		@student = "студент"
 	else
 		@reg = "Team registration";
 		@text_form = "It would not bother you to fill this form . It is necessary for the organization of the championship. Many fields? And who is now easy.";
@@ -13,7 +33,26 @@
 		@name_team = "Name of your team";	
 		@text_message = "You can also leave a message for us. For example, about hotels, and so on.";
 		@manager = "Manager"
-		
+		@apelsin = "Orange-team"
+		@add_teammate = "Add teammate"
+		@del_teame  = "Delete the last one";
+		@add_team = 'Register the team'
+		@name1 = "name";
+		@name2 = "family name";
+		@name3 = "second name";
+		@text_before_teammates = "Fill out the information on the composition of the team. Contact data can be used to communicate with the players.
+Contact information will not be visible to all site visitors . If the team are more than three people, use the button 'add a player '."
+		@sostav = "Command structure"
+		@level = "The level of playing"
+		@universityName = "University"
+		@job = "position"
+		@wordPlayer = "Player "
+		@Ivan = "John"
+		@Ivanov = "Green"
+		@Ivanovich = ""
+		@rector = 'rector'
+		@prepodavatel = "teacher"
+		@student = "student"
 	end;%>
 
 
@@ -27,7 +66,7 @@
 
 	<div class="oneField">
     <a><%=@name_team%></a>
-    <%= f.text_field :name_team, placeholder:"Апельсин", :required => true %>
+    <%= f.text_field :name_team, placeholder: @apelsin, :required => true %>
 	</div>
 
      <div class="registrationRegPar2">
@@ -43,20 +82,20 @@
   
 <%= f.fields_for @team.manager do |ct|  %>
 	<div class="oneField">
-	<a>Фамилия</a>
-      <%= ct.text_field :familyname, placeholder:"Иванов", :required => true%>
+	<a><%=@name2%></a>
+      <%= ct.text_field :familyname, placeholder:@Ivanov, :required => true%>
 </div><div class="oneField">  
-	<a>Имя</a>	    
-      <%= ct.text_field :name , placeholder:"Иван", :required => true %>
+	<a><%=@name1%></a>	    
+      <%= ct.text_field :name , placeholder:@Ivan, :required => true %>
 	</div><div class="oneField">    	
-    	<a>Отчество</a>
-      <%= ct.text_field :secondname, placeholder:"Иванович", :required => true%>
+    	<a><%=@name3%></a>
+      <%= ct.text_field :secondname, placeholder:@Ivanovich, :required => true%>
 </div><div class="oneField"> 
-    	<a>Университет</a>
-      <%= ct.text_field :univercity, placeholder:"Петрозаводский ГУ", :required => true%>
+    	<a><%=@universityName%></a>
+      <%= ct.text_field :univercity, placeholder:@universityExample, :required => true%>
 </div><div class="oneField">     
-      <%= ct.label :Должность %><br>     
-      <%= ct.select(:position, options_for_select([['ректор','ректор'], ['студент','студент'],['преподаватель','преподаватель']]),{}) %>
+      <%= ct.label @job %><br>     
+      <%= ct.select(:position, options_for_select([[@rector,@rector], [@student,@student],[@prepodavatel,@prepodavatel]]),{}) %>
 </div><div class="oneField"> 
     	<a>Телефон</a>
       <%= ct.text_field :kontakts, placeholder:"+79876543210", :required => true%>
@@ -67,11 +106,9 @@
    <% end %>
 </div><!-- class="fieldGroup" -->
 
-	<div class="registrationRegPar">
-<h3> Состав команды </h3>
-
-		Заполните информацию о составе команды. Контактные данные могут быть использованы для связи с игроками.
-		Контактные данные не будут видны всем посетителям сайта. Если в команде выступают более трех человек, воспользуйтесь кнопкой "добавить игрока".
+<div class="registrationRegPar">
+<h3> <%=@sostav%></h3>
+<%=@text_before_teammates%>
 	</div>
 
  
@@ -84,19 +121,19 @@
  <div class="fieldGroup teammateGroup" id="<%="player"+q.to_s%>" hidden="true"> 
 <% end %>
 
-<h3> Игрок <%=q%> </h3>
+<h3> <%=@wordPlayer+q.to_s%> </h3>
 <%q=q+1%> 
   <%= f.fields_for tm, index: tm.id do |ct| %>
-	<div class="oneField"><a>Фамилия</a>
-      <%= ct.text_field :lastname, class:"e-regTextInput", placeholder:"Петров" %>
+	<div class="oneField"><a><%=@name2%></a>
+      <%= ct.text_field :lastname, class:"e-regTextInput", placeholder:@Ivanov %>
 	</div>
-	<div class="oneField"><a>Имя</a>   
-      <%= ct.text_field :name, class:"e-regTextInput", placeholder:"Петр" %>
+	<div class="oneField"><a><%=@name1%></a>   
+      <%= ct.text_field :name, class:"e-regTextInput", placeholder:@Ivan %>
 	</div>
-   	<div class="oneField"><a>Отчество</a>
-      <%= ct.text_field :secondname, class:"e-regTextInput", placeholder:"Петрович" %>
+   	<div class="oneField"><a><%=@name3%></a>
+      <%= ct.text_field :secondname, class:"e-regTextInput", placeholder:@Ivanovich %>
 	</div>   
-	<div class="oneField"><a>Уровень игры</a>
+	<div class="oneField"><a> <%=@level%> </a>
       <%= ct.text_field :level, class:"e-regTextInput", placeholder:"1 дан" %>
 	</div>   
 	<div class="oneField"><a>e-mail</a>
@@ -106,13 +143,13 @@
 </div>
 <%end%>
 <div class="registrationAddPlayer">
-<a onClick="playerAdd()" style="color:#0000AA" > Добавить игрока </a>
+<a onClick="playerAdd()" style="color:#0000AA" > <%=@add_teammate%> </a>
 </div>
 <div class="registrationAddPlayer">
-<a onClick="playerRem()" style="color:#AA0000" > Убрать игрока </a>
+<a onClick="playerRem()" style="color:#AA0000" > <%=@del_teame%> </a>
 </div>
 <div class="registrationAddPlayer">
-    <%= f.submit :value=>'Добавить каманду', :class=>"e-regSubmit"%>
+    <%= f.submit :value=> @add_team, :class=>"e-regSubmit"%>
 </div>
 <%end%>
 

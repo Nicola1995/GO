@@ -1,4 +1,12 @@
-
+<%
+     if session[:lang] == 0
+	@article.text = @article.text.split("<eng>")[0];
+	@article.title = @article.title.split("<eng>")[0];	
+     else
+	@article.text = @article.text.split("<eng>")[1];
+	@article.title = @article.title.split("<eng>")[1];
+     end;
+  %>
     <div class="arcticleNewsFull">
       <div  class="newsHeader">
         <div class="newsTitle"> <%= @article.title %> </div>

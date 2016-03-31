@@ -1,7 +1,20 @@
- <div class="e-newsTitle"> НОВОСТИ </div>
-       
+
+
+<div class="newsFullPageContent">       
 
   <% @articles.reverse.each do |article| %> 
+  <%
+     if session[:lang] == 0
+	article.text = article.text.split("<eng>")[0];
+	article.title = article.title.split("<eng>")[0];
+	@nnn = "Новость целиком";	
+     else
+	article.text = article.text.split("<eng>")[1];
+	article.title = article.title.split("<eng>")[1];
+	@nnn = "View full";
+     end;
+  %>
+  <%if article.title != ""%>  
   <div class="newsPostCont">
       <div  class="newsHeader">
         <div class="newsTitle"> <%= article.title %> </div>
@@ -13,16 +26,21 @@
      <p>
 	<% par.split("<pic>").each do |m_par| %>
 	  <%= m_par %>
-          <%if article.pictures[qw]!= nil %>
+          <%if article.pictures[qw]!= nil && qw == 0 %>
  		<%=  image_tag article.pictures[qw].image.url(:thumb) %>
 	  <%end%>
 	  <% qw+=1 %>
         <%end%>
     </p>
 	<div class="newsReadFull">
-      <%= link_to 'Новость целиком', article_path(article) %>
+      <%= link_to @nnn, article_path(article) %>
 	</div>
   </div>
  </div>
+  <%end%>
   <% end %>
-
+</div>
+<div class="newsVideos">
+<iframe width="250"  src="https://www.youtube.com/embed/y4PQASICTIs" frameborder="0" allowfullscreen></iframe>
+<iframe width="250" src="https://www.youtube.com/embed/SjVID2ZOIuE" frameborder="0" allowfullscreen></iframe>
+</div>

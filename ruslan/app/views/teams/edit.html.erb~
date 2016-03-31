@@ -8,7 +8,7 @@
 
   <p>
     <%= f.label :Подтверждение %><br>
-    <%= f.text_field :check %>
+    <%= f.select(:check, options_for_select([['принять',true], ['не принять',false]])) %>
   </p>
 
 

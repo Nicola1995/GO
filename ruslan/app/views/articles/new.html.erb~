@@ -1,5 +1,6 @@
+<div id="contaktsCont">
 <h1> Добавить новость </h1>
-<%= form_for :article, url: article_path, html: {multipart: true} do |f| %>
+<%= form_for :article, url: articles_path, html: {multipart: true} do |f| %>
   <p>
     <%= f.label :Название %><br>
     <%= f.text_field :title %>
@@ -20,4 +21,4 @@
     <%= f.submit %>
   </p>
 <% end %>
-
+</div>

@@ -1,9 +1,11 @@
+<div id="contaktsCont">
+
 <h1>РЕДАКТИРОВАНИЕ НОВОСТЕЙ</h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Название</th>
+    <th>Текст</th>
     <th colspan="3"></th>
   </tr>
  
@@ -11,10 +13,11 @@
     <tr>
       <td><%= article.title %></td>
       
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
+      <td><%= link_to 'Просмотреть', article_path(article) %></td>
+      <td><%= link_to 'Удалить', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'ВЫ уверены? После удаления восстановить новость невозможно' } %></td>
     </tr>
   <% end %>
 </table>
+</div>

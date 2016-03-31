@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
-  http_basic_authenticate_with name: "lasarev", password: "qweq", only: :destroy
-   
+  http_basic_authenticate_with name: "lasarev", password: "1234567", :only => [:destroy, :create, :addel, :new] 
   def index
     @articles = Article.all
   end

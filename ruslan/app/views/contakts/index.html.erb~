@@ -1,10 +1,19 @@
+<%if session[:lang] == 0
+	@tt = "Клуб любителей игры го Петрозаводского государственного университета";
+	@tel = "Телефон";
+else
+	@tt = "Club of go in PetrSu"
+	@tel = "Telephone";
+end;
+%> 
+
 <div id="contaktsCont">
 
-<h2> 	Клуб любителей игры го Петрозаводского государственного университета</h2>
-<p>  <=@text_z>  </p>
+<h2> <%=@tt%></h2>
+<p>  <%=@text_z%>  </p>
 <h3>Лазарев Алексей викторович</h3>
 <div class="contaktField">
-	<label class="contaktFieldL">Телефон</label><label class="contaktFieldR">+7 987 654 3210</label><br>
+	<label class="contaktFieldL"><%=@tel%></label><label class="contaktFieldR">+7 987 654 3210</label><br>
 	<label class="contaktFieldL">e-mail</label><label class="contaktFieldR">lazarev@yahoo.com</label>
 </div>
 </div>

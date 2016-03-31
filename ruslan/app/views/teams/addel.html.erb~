@@ -1,3 +1,4 @@
+<div id="showteamsCont">
 <ol>
 <% @teams.each do |team| %>
 <li>Команда<ul>
@@ -22,7 +23,7 @@
 	<ul>
 	<%team.teammates.each do |tm|%>	
 	<li> [<%=tm.lastname%> <%=tm.name%> <%=tm.secondname%>, 
-	   уровень="<%=tm.level%>", email = <%=tm.email%>] </li>
+	   уровень="<%=tm.level%>", email = <%=tm.email%>, tel = <%=tm.contakts%>] </li>
 	<%end%>
 	</ul>
 </li>
@@ -38,3 +39,4 @@
 </ul>
   <% end %>
 </ol>
+</div>
